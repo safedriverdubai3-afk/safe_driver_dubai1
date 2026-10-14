@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Driver Packages in Dubai | Safe Driver Dubai</title>
+    <meta name="description" content="Choose from flexible monthly driver packages in Dubai. RTA-certified chauffeurs available for 5-day or 6-day weekly schedules with 8, 10, or 12 daily duty hours.">
+    
+    <style>
+        /* RESET & BASE STYLES */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #334155;
+            background-color: #f8fafc;
+            line-height: 1.5;
+        }
+
+        /* HEADER / NAVBAR SECTION */
+        .sdd-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+        }
+
+        .sdd-header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sdd-logo {
+            text-decoration: none;
+        }
+
+        .sdd-logo h2 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #0f172a;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .sdd-nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .sdd-nav-item {
+            position: relative;
+        }
+
+        .sdd-nav-link {
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0.5rem 0;
+            transition: color 0.2s ease;
+        }
+
+        .sdd-nav-link:hover,
+        .sdd-nav-link.active {
+            color: #0284c7;
+        }
+
+        .sdd-chevron {
+            transition: transform 0.25s ease;
+        }
+
+        /* DROPDOWN MENU */
+        .sdd-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 230px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.25s ease;
+        }
+
+        .sdd-dropdown:hover .sdd-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .sdd-dropdown:hover .sdd-chevron {
+            transform: rotate(180deg);
+        }
+
+        .sdd-dropdown-menu li a {
+            display: block;
+            padding: 0.6rem 1.25rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #475569;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .sdd-dropdown-menu li a:hover {
+            background-color: #f0f9ff;
+            color: #0284c7;
+        }
+
+        .sdd-btn-book {
+            background-color: #25d366;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .sdd-btn-book:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+        }
+
+        .sdd-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #0f172a;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        /* HERO SECTION */
+        .sdd-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 4rem 1.25rem 3.5rem 1.25rem;
+            text-align: center;
+        }
+
+        .sdd-hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .sdd-hero-badge {
+            display: inline-block;
+            background-color: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .sdd-hero-title {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+
+        .sdd-hero-title span {
+            color: #38bdf8;
+        }
+
+        .sdd-hero-desc {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin: 0 auto 2rem auto;
+            max-width: 750px;
+        }
+
+        /* PACKAGES SECTION */
+        .sdd-packages-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.25rem;
+        }
+
+        .sdd-section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .sdd-section-title h2 {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #0f172a;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .sdd-section-title p {
+            color: #64748b;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .sdd-packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+
+        .sdd-pkg-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            position: relative;
+        }
+
+        .sdd-pkg-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+            border-color: #0284c7;
+        }
+
+        .sdd-pkg-card.popular {
+            border: 2px solid #0284c7;
+        }
+
+        .sdd-popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background-color: #0284c7;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .sdd-pkg-header {
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-pkg-num {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #0284c7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: #e0f2fe;
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+
+        .sdd-pkg-title {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #0f172a;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .sdd-pkg-price-wrap {
+            margin-bottom: 1rem;
+        }
+
+        .sdd-pkg-original-price {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .sdd-pkg-price {
+            display: inline-block;
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: #0284c7;
+        }
+
+        .sdd-pkg-price span {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .sdd-pkg-desc {
+            font-size: 0.92rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .sdd-pkg-btn {
+            background-color: #25d366;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .sdd-pkg-btn:hover {
+            background-color: #1da851;
+        }
+
+        /* WHATSAPP BANNER */
+        .sdd-wa-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 4rem 1.25rem;
+            text-align: center;
+            color: #ffffff;
+            border-top: 4px solid #25d366;
+        }
+
+        .sdd-wa-banner-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .sdd-wa-banner h2 {
+            font-size: 2.25rem;
+            font-weight: 900;
+            margin: 0 0 1rem 0;
+        }
+
+        .sdd-wa-banner p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin: 0 0 2rem 0;
+        }
+
+        .sdd-wa-banner-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+        }
+
+        .sdd-wa-banner-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        .sdd-footer {
+            background-color: #0b1329;
+            color: #94a3b8;
+            padding: 4rem 1.25rem 2rem 1.25rem;
+        }
+
+        .sdd-footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .sdd-footer h3, .sdd-footer h4 {
+            color: #ffffff;
+            margin: 0 0 1rem 0;
+        }
+
+        .sdd-footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid #1e293b;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .sdd-mobile-toggle {
+                display: block;
+            }
+
+            .sdd-header-cta {
+                display: none;
+            }
+
+            .sdd-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 1rem 1.25rem;
+                display: none;
+                box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
+            }
+
+            .sdd-nav.active {
+                display: block;
+            }
+
+            .sdd-nav-list {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+            }
+
+            .sdd-packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sdd-footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .sdd-packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sdd-footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sdd-hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header class="sdd-header">
+        <div class="sdd-header-container">
+            <a href="#" class="sdd-logo">
+                <h2>SAFE DRIVER <span>DUBAI</span></h2>
+            </a>
+
+            <nav class="sdd-nav">
+                <ul class="sdd-nav-list">
+                    <li class="sdd-nav-item"><a href="#home" class="sdd-nav-link active">Home</a></li>
+                    <li class="sdd-nav-item"><a href="#about" class="sdd-nav-link">About Us</a></li>
+                    <li class="sdd-nav-item sdd-dropdown">
+                        <a href="#services" class="sdd-nav-link">
+                            Services
+                            <svg class="sdd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <ul class="sdd-dropdown-menu">
+                            <li><a href="#monthly-driver">Monthly Safe Driver</a></li>
+                            <li><a href="#daily-driver">Daily / Weekly Driver</a></li>
+                            <li><a href="#event-driver">Event & Party Chauffeur</a></li>
+                            <li><a href="#corporate-driver">Corporate Driver</a></li>
+                        </ul>
+                    </li>
+                    <li class="sdd-nav-item"><a href="#blogs" class="sdd-nav-link">Blogs</a></li>
+                    <li class="sdd-nav-item"><a href="contact.html" class="sdd-nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="sdd-header-cta">
+                <a href="https://wa.me/923325405893" target="_blank" class="sdd-btn-book">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Book Now
+                </a>
+            </div>
+
+            <button class="sdd-mobile-toggle" aria-label="Toggle Navigation" onclick="document.querySelector('.sdd-nav').classList.toggle('active')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="sdd-hero">
+        <div class="sdd-hero-container">
+            <span class="sdd-hero-badge">RTA Certified Chauffeurs</span>
+            <h1 class="sdd-hero-title">Monthly Driver Packages in <span>Dubai</span></h1>
+            <p class="sdd-hero-desc">Enjoy the luxury of a private chauffeur for your own car. Professional, reliable, and cost-effective.</p>
+        </div>
+<!-- COMPACT WHATSAPP HEADING BUTTON -->
+<div class="sdd-wa-compact-wrap">
+    <span class="sdd-wa-badge">Quick Inquiry</span>
+    <a href="https://wa.me/923325405893?text=Hi,%20I%20want%20to%20book%20a%20driver." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="sdd-wa-compact-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff" stroke="none"></path>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+        </svg>
+        <span>WhatsApp Us</span>
+    </a>
+</div>
+<!-- FULL MONTH PERSONAL DRIVER SECTION -->
+<section class="sdd-monthly-card-section">
+    <div class="sdd-monthly-container">
+        
+        <!-- CARD CONTAINER -->
+        <div class="sdd-monthly-card">
+            
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="sdd-monthly-content">
+                <span class="sdd-monthly-badge">Full Month Service</span>
+                <h2 class="sdd-monthly-title">Get a Personal Monthly Driver for the Whole Month</h2>
+                <p class="sdd-monthly-desc">
+                    Experience unmatched convenience and peace of mind with a dedicated, RTA-certified chauffeur assigned exclusively to your vehicle. No visa hassles, no sponsorship fees, and zero long-term commitments—just reliable daily transportation tailored to your private schedule.
+                </p>
+
+                <!-- BENEFIT HIGHLIGHTS GRID -->
+                <div class="sdd-monthly-features">
+                    <div class="sdd-feature-item">
+                        <div class="sdd-feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>100% Legal & Sponsored</strong>
+                            <p>We cover all visa, insurance, and medical expenses.</p>
+                        </div>
+                    </div>
+
+                    <div class="sdd-feature-item">
+                        <div class="sdd-feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Service Continuity Guarantee</strong>
+                            <p>Instant replacement driver provided if your driver is on leave.</p>
+                        </div>
+                    </div>
+
+                    <div class="sdd-feature-item">
+                        <div class="sdd-feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Family & Business Friendly</strong>
+                            <p>Perfect for daily office runs, school drop-offs & errands.</p>
+                        </div>
+                    </div>
+
+                    <div class="sdd-feature-item">
+                        <div class="sdd-feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Flexible Monthly Terms</strong>
+                            <p>Pay month-to-month with no compulsory annual contracts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA BUTTON -->
+                <div class="sdd-monthly-cta">
+                    <a href="https://wa.me/923325405893?text=Hi,%20I%20want%20to%20get%20a%20personal%20monthly%20driver." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="sdd-monthly-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff" stroke="none"></path>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                        </svg>
+                        Request Monthly Driver
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: STATS / HIGHLIGHT BOX -->
+            <div class="sdd-monthly-highlight-box">
+                <div class="sdd-highlight-inner">
+                    <span class="sdd-highlight-num">30</span>
+                    <span class="sdd-highlight-unit">Days Service</span>
+                    <p class="sdd-highlight-tag">Full Monthly Driver Coverage</p>
+                    
+                    <ul class="sdd-highlight-list">
+                        <li><span>✔</span> RTA Certified Drivers</li>
+                        <li><span>✔</span> Drive Your Own Vehicle</li>
+                        <li><span>✔</span> All UAE Routes Covered</li>
+                        <li><span>✔</span> Zero Hidden Charges</li>
+                    </ul>
+
+                    <div class="sdd-highlight-footer">
+                        Deployable within <strong>24 to 48 Hours</strong> in Dubai
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CSS STYLES FOR MONTHLY DRIVER CARD SECTION -->
+<style>
+    .sdd-monthly-card-section {
+        padding: 4rem 1.25rem;
+        background-color: #f8fafc;
+    }
+
+    .sdd-monthly-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .sdd-monthly-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 24px;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 3.5rem;
+        align-items: center;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    /* LEFT SIDE */
+    .sdd-monthly-badge {
+        display: inline-block;
+        background-color: #e0f2fe;
+        color: #0284c7;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 6px 14px;
+        border-radius: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .sdd-monthly-title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        color: #0f172a;
+        line-height: 1.25;
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.5px;
+    }
+
+    .sdd-monthly-desc {
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0 0 2rem 0;
+    }
+
+    /* FEATURES GRID */
+    .sdd-monthly-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2.25rem;
+    }
+
+    .sdd-feature-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .sdd-feature-icon {
+        width: 32px;
+        height: 32px;
+        background-color: #f0f9ff;
+        color: #0284c7;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .sdd-feature-item strong {
+        display: block;
+        font-size: 0.92rem;
+        color: #0f172a;
+        margin-bottom: 2px;
+    }
+
+    .sdd-feature-item p {
+        font-size: 0.82rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    /* CTA BUTTON */
+    .sdd-monthly-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #25d366;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 800;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 50px;
+        box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+        transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .sdd-monthly-btn:hover {
+        background-color: #1da851;
+        transform: translateY(-2px);
+    }
+
+    /* RIGHT SIDE HIGHLIGHT BOX */
+    .sdd-monthly-highlight-box {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        border-radius: 20px;
+        padding: 2.5rem 2rem;
+        color: #ffffff;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+    }
+
+    .sdd-highlight-num {
+        font-size: 4rem;
+        font-weight: 900;
+        color: #38bdf8;
+        line-height: 1;
+        display: block;
+    }
+
+    .sdd-highlight-unit {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .sdd-highlight-tag {
+        font-size: 0.88rem;
+        color: #94a3b8;
+        margin: 0 0 1.75rem 0;
+    }
+
+    .sdd-highlight-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.75rem 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+    }
+
+    .sdd-highlight-list li {
+        font-size: 0.9rem;
+        color: #cbd5e1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+    }
+
+    .sdd-highlight-list span {
+        color: #38bdf8;
+        font-size: 1rem;
+    }
+
+    .sdd-highlight-footer {
+        border-top: 1px solid #334155;
+        padding-top: 1.25rem;
+        font-size: 0.85rem;
+        color: #94a3b8;
+    }
+
+    .sdd-highlight-footer strong {
+        color: #ffffff;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+        .sdd-monthly-card {
+            grid-template-columns: 1fr;
+            padding: 2rem;
+            gap: 2.5rem;
+        }
+
+        .sdd-monthly-title {
+            font-size: 1.85rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .sdd-monthly-features {
+            grid-template-columns: 1fr;
+        }
+
+        .sdd-monthly-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+<style>
+    .sdd-wa-compact-wrap {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .sdd-wa-badge {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #0284c7;
+    }
+
+    .sdd-wa-compact-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #25d366;
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 0.95rem;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .sdd-wa-compact-btn:hover {
+        background-color: #1da851;
+        transform: translateY(-2px);
+    }
+</style>
+<!-- WHO TRUSTED US SECTION -->
+<section class="sdd-trusted-section">
+    <div class="sdd-container">
+        
+        <div class="sdd-section-title">
+            <span class="sdd-badge">Trusted Chauffeur Partner</span>
+            <h2>Who Trusted Us in Dubai</h2>
+            <p>Providing executive-class, RTA-certified personal drivers across the UAE.</p>
+        </div>
+
+        <!-- STATS COUNTER GRID -->
+        <div class="sdd-stats-grid">
+            <div class="sdd-stat-card">
+                <span class="sdd-stat-number">500+</span>
+                <span class="sdd-stat-label">Monthly Clients Served</span>
+            </div>
+            <div class="sdd-stat-card">
+                <span class="sdd-stat-number">100%</span>
+                <span class="sdd-stat-label">RTA Licensed Drivers</span>
+            </div>
+            <div class="sdd-stat-card">
+                <span class="sdd-stat-number">4.9★</span>
+                <span class="sdd-stat-label">Client Satisfaction Rating</span>
+            </div>
+            <div class="sdd-stat-card">
+                <span class="sdd-stat-number">10+</span>
+                <span class="sdd-stat-label">Years Operating in UAE</span>
+            </div>
+        </div>
+
+        <!-- TRUSTED CLIENT TYPES -->
+        <div class="sdd-trusted-clients">
+            <div class="sdd-client-category">
+                <div class="sdd-client-icon">🏢</div>
+                <h4>Corporate Executives</h4>
+                <p>Trusted by CEOs, business owners, and corporate teams for hassle-free daily commutes.</p>
+            </div>
+            <div class="sdd-client-category">
+                <div class="sdd-client-icon">👨‍👩‍👧‍👦</div>
+                <h4>Families & VIPs</h4>
+                <p>Chosen by families for safe school runs, daily errands, and weekend outings.</p>
+            </div>
+            <div class="sdd-client-category">
+                <div class="sdd-client-icon">✈️</div>
+                <h4>Expats & Tourists</h4>
+                <p>Preferred by newcomers in Dubai who prefer not to navigate local traffic on their own.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CSS FOR WHO TRUSTED US -->
+<style>
+    .sdd-trusted-section {
+        padding: 4.5rem 1.25rem;
+        background-color: #ffffff;
+    }
+
+    .sdd-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .sdd-badge {
+        display: inline-block;
+        background-color: #e0f2fe;
+        color: #0284c7;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 6px 14px;
+        border-radius: 50px;
+        margin-bottom: 0.75rem;
+    }
+
+    .sdd-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin: 3rem 0;
+    }
+
+    .sdd-stat-card {
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .sdd-stat-number {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #0284c7;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .sdd-stat-label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #475569;
+    }
+
+    .sdd-trusted-clients {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+
+    .sdd-client-category {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+    }
+
+    .sdd-client-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .sdd-client-category h4 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .sdd-client-category p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 992px) {
+        .sdd-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .sdd-trusted-clients { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+        .sdd-stats-grid { grid-template-columns: 1fr; }
+    }
+</style>
+    </section>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Driver Packages - Safe Driver Dubai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Pure White Background */
+        html, body {
+            background-color: #ffffff !important;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           SERVICE RATES SECTION
+        -------------------------------------------------- */
+        .rates-section {
+            padding: 5rem 1.25rem;
+            background-color: #ffffff;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .rates-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* HEADER BLOCK */
+        .rates-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .rates-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #fef3c7;
+            color: #92400e;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 22px;
+            border-radius: 50px;
+            border: 1px solid #fde68a;
+            margin-bottom: 1.25rem;
+        }
+
+        .rates-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #d97706;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px rgba(217, 119, 6, 0.6);
+        }
+
+        .rates-main-heading {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+        }
+
+        .rates-main-heading span {
+            color: #d97706;
+            background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .rates-sub-heading {
+            font-size: 1.1rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        /* GRID SYSTEM FOR 6 CARDS */
+        .rates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        /* RATE CARD BOX */
+        .rate-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .rate-card:hover {
+            transform: translateY(-8px);
+            border-color: #d97706;
+            box-shadow: 0 20px 30px -10px rgba(217, 119, 6, 0.15);
+        }
+
+        /* ELITE CARD SPECIAL HIGHLIGHT */
+        .rate-card.elite {
+            border: 2px solid #d97706;
+            background: linear-gradient(180deg, #ffffff 0%, #fffbf0 100%);
+            box-shadow: 0 15px 35px -5px rgba(217, 119, 6, 0.15);
+        }
+
+        /* DISCOUNT TAG */
+        .rate-tag {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 6px 18px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+            white-space: nowrap;
+        }
+
+        .rate-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .rate-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .rate-desc {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* PRICE DISPLAY AREA */
+        .price-wrapper {
+            background: #f8fafc;
+            border: 1px solid #f1f5f9;
+            border-radius: 16px;
+            padding: 1.15rem 0.85rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .rate-card.elite .price-wrapper {
+            background: #fef3c7;
+            border-color: #fde68a;
+        }
+
+        .price-label {
+            font-size: 0.75rem;
+            color: #b45309;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .price-value-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* STRIKETHROUGH PRICE */
+        .old-price {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+
+        .current-price {
+            font-size: 1.85rem;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        .price-subtext {
+            font-size: 0.8rem;
+            color: #475569;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        /* FEATURES LIST */
+        .rate-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            text-align: left;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        .rate-features li {
+            font-size: 0.85rem;
+            color: #334155;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .rate-features li::before {
+            content: "✓";
+            color: #d97706;
+            font-weight: 900;
+            font-size: 0.9rem;
+            margin-top: 1px;
+        }
+
+        /* WHATSAPP CTA BUTTON */
+        .rate-wa-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+            width: 100%;
+        }
+
+        .rate-wa-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .rates-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .rates-main-heading {
+                font-size: 2.1rem;
+            }
+
+            .rates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MONTHLY DRIVER RATES SECTION -->
+    <section class="rates-section">
+        <div class="rates-container">
+            
+            <!-- SECTION HEADER -->
+            <div class="rates-header">
+                <div class="rates-badge">
+                    <span class="rates-badge-dot"></span>
+                    Dedicated Monthly Services
+                </div>
+                <h2 class="rates-main-heading">Monthly Driver <span>Packages</span></h2>
+                <p class="rates-sub-heading">Professional, RTA-certified personal drivers for your daily commuting needs</p>
+            </div>
+
+            <!-- RATES GRID - 6 BOXES -->
+            <div class="rates-grid">
+
+                <!-- PACKAGE 1 -->
+                <div class="rate-card">
+                    <span class="rate-tag">Standard 5-Day Plan</span>
+                    <div class="rate-icon">🚗</div>
+                    <h3 class="rate-title">Package 1</h3>
+                    <p class="rate-desc">8 Hours / Day • 5 Days / Week</p>
+                    
+                    <div class="price-wrapper">
+                        <div class="price-label">Monthly Rate</div>
+                        <div class="price-value-container">
+                            <span class="old-price">AED 5,300</span>
+                            <strong class="current-price">AED 4,500</strong>
+                        </div>
+                        <div class="price-subtext">Per Month</div>
+                    </div>
+
+                    <ul class="rate-features">
+                        <li>Dedicated RTA-certified personal driver</li>
+                        <li>Punctual daily office and personal transfers</li>
+                        <li>Flexible scheduling across chosen weekdays</li>
+                    </ul>
+
+                    <a href="https://api.whatsapp.com/send?phone=923325405893&text=Hi,%20I%20want%20to%20book%20Package%201%20Monthly%20Driver%20(8%20hrs/day,%205%20days/wk)%20for%20AED%204500." target="_blank" rel="noopener noreferrer" class="rate-wa-btn">
+                        💬 Book Package 1
+                    </a>
+                </div>
+
+                <!-- PACKAGE 2 -->
+                <div class="rate-card">
+                    <span class="rate-tag">Extended 5-Day Plan</span>
+                    <div class="rate-icon">🚘</div>
+                    <h3 class="rate-title">Package 2</h3>
+                    <p class="rate-desc">10 Hours / Day • 5 Days / Week</p>
+                    
+                    <div class="price-wrapper">
+                        <div class="price-label">Monthly Rate</div>
+                        <div class="price-value-container">
+                            <span class="old-price">AED 5,500</span>
+                            <strong class="current-price">AED 5,000</strong>
+                        </div>
+                        <div class="price-subtext">Per Month</div>
+                    </div>
+
+                    <ul class="rate-features">
+                        <li>Full day coverage for extended work shifts</li>
+                        <li>Hassle-free route navigation & traffic management</li>
+                        <li>Guaranteed fixed driver for personal comfort</li>
+                    </ul>
+
+                    <a href="https://api.whatsapp.com/send?phone=923325405893&text=Hi,%20I%20want%20to%20book%20Package%202%20Monthly%20Driver%20(10%20hrs/day,%205%20days/wk)%20for%20AED%205000." target="_blank" rel="noopener noreferrer" class="rate-wa-btn">
+                        💬 Book Package 2
+                    </a>
+                </div>
+
+                <!-- PACKAGE 3 -->
+                <div class="rate-card">
+                    <span class="rate-tag">Full-Day 5-Day Plan</span>
+                    <div class="rate-icon">🚙</div>
+                    <h3 class="rate-title">Package 3</h3>
+                    <p class="rate-desc">12 Hours / Day • 5 Days / Week</p>
+                    
+                    <div class="price-wrapper">
+                        <div class="price-label">Monthly Rate</div>
+                        <div class="price-value-container">
+                            <span class="old-price">AED 6,000</span>
+                            <strong class="current-price">AED 5,500</strong>
+                        </div>
+                        <div class="price-subtext">Per Month</div>
+                    </div>
+
+                    <ul class="rate-features">
+                        <li>Complete 12-hour daily driver availability</li>
+                        <li>Ideal for executives with busy daily schedules</li>
+                        <li>Includes city & inter-emirate travel assistance</li>
+                    </ul>
+
+                    <a href="https://api.whatsapp.com/send?phone=923325405893&text=Hi,%20I%20want%20to%20book%20Package%203%20Monthly%20Driver%20(12%20hrs/day,%205%20days/wk)%20for%20AED%205500." target="_blank" rel="noopener noreferrer" class="rate-wa-btn">
+                        💬 Book Package 3
+                    </a>
+                </div>
+
+                <!-- PACKAGE 4 -->
+                <div class="rate-card">
+                    <span class="rate-tag">Standard 6-Day Plan</span>
+                    <div class="rate-icon">🏎️</div>
+                    <h3 class="rate-title">Package 4</h3>
+                    <p class="rate-desc">8 Hours / Day • 6 Days / Week</p>
+                    
+                    <div class="price-wrapper">
+                        <div class="price-label">Monthly Rate</div>
+                        <div class="price-value-container">
+                            <span class="old-price">AED 6,500</span>
+                            <strong class="current-price">AED 5,500</strong>
+                        </div>
+                        <div class="price-subtext">Per Month</div>
+                    </div>
+
+                    <ul class="rate-features">
+                        <li>6 days weekly coverage for daily commuting</li>
+                        <li>Experienced & well-mannered private chauffeur</li>
+                        <li>Door-to-door direct pick-up & drop-off</li>
+                        <li>Immediate driver replacement guarantee</li>
+                    </ul>
+
+                    <a href="https://api.whatsapp.com/send?phone=923325405893&text=Hi,%20I%20want%20to%20book%20Package%204%20Monthly%20Driver%20(8%20hrs/day,%206%20days/wk)%20for%20AED%205500." target="_blank" rel="noopener noreferrer" class="rate-wa-btn">
+                        💬 Book Package 4
+                    </a>
+                </div>
+
+                <!-- PACKAGE 5 -->
+                <div class="rate-card">
+                    <span class="rate-tag">Extended 6-Day Plan</span>
+                    <div class="rate-icon">🚐</div>
+                    <h3 class="rate-title">Package 5</h3>
+                    <p class="rate-desc">10 Hours / Day • 6 Days / Week</p>
+                    
+                    <div class="price-wrapper">
+                        <div class="price-label">Monthly Rate</div>
+                        <div class="price-value-container">
+                            <span class="old-price">AED 7,000</span>
+                            <strong class="current-price">AED 6,000</strong>
+                        </div>
+                        <div class="price-subtext">Per Month</div>
+                    </div>
+
+                    <ul class="rate-features">
+                        <li>Comprehensive 10-hour daily availability</li>
+                        <li>Perfect for family runs, business, and errands</li>
+                        <li>Smooth handling of peak-hour Dubai traffic</li>
+                        <li>24/7 dedicated customer support backup</li>
+                    </ul>
+
+                    <a href="https://api.whatsapp.com/send?phone=923325405893&text=Hi,%20I%20want%20to%20book%20Package%205%20Monthly%20Driver%20(10%20hrs/day,%206%20days/wk)%20for%20AED%206000." target="_blank" rel="noopener noreferrer" class="rate-wa-btn">
+                        💬 Book Package 5
+                    </a>
+                </div>
+
+                <!-- PACKAGE 6 (ELITE PACKAGE) -->
+                <div class="rate-card elite">
+                    <span class="rate-tag">👑 VIP Elite Package</span>
+                    <div class="rate-icon">⭐</div>
+                    <h3 class="rate-title">Package 6 (Elite)</h3>
+                    <p class="rate-desc">12 Hours / Day • 6 Days / Week</p>
+                    
+                    <div class="price-wrapper">
+                        <div class="price-label">VIP Monthly Rate</div>
+                        <div class="price-value-container">
+                            <span class="old-price">AED 8,000</span>
+                            <strong class="current-price">AED 6,800</strong>
+                        </div>
+                        <div class="price-subtext">Per Month</div>
+                    </div>
+
+                    <ul class="rate-features">
+                        <li>Top-tier executive VIP trained chauffeur</li>
+                        <li>Full 12-hour availability 6 days a week</li>
+                        <li>Priority driver assignment & instant replacement</li>
+                        <li>Multilingual & expert UAE highway navigation</li>
+                        <li>Complete privacy & premium corporate standards</li>
+                    </ul>
+
+                    <a href="https://api.whatsapp.com/send?phone=923325405893&text=Hi,%20I%20want%20to%20book%20Package%206%20Elite%20Monthly%20Driver%20(12%20hrs/day,%206%20days/wk)%20for%20AED%206800." target="_blank" rel="noopener noreferrer" class="rate-wa-btn">
+                        💬 Book Elite Package
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- CSS STYLES -->
+<style>
+    .sdd-why-section {
+        padding: 4.5rem 1.25rem;
+        background-color: #ffffff;
+    }
+
+    .sdd-why-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* HEADERS */
+    .sdd-why-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .sdd-why-badge {
+        display: inline-block;
+        background-color: #e0f2fe;
+        color: #0284c7;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 6px 16px;
+        border-radius: 50px;
+        margin-bottom: 0.75rem;
+    }
+
+    .sdd-why-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #0f172a;
+        margin: 0 0 0.75rem 0;
+        letter-spacing: -0.5px;
+    }
+
+    .sdd-why-subtitle {
+        font-size: 1.1rem;
+        color: #64748b;
+        margin: 0 auto;
+        max-width: 650px;
+        line-height: 1.6;
+    }
+
+    /* GRID LAYOUT */
+    .sdd-why-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    /* LEFT CARD & BULLET LIST */
+    .sdd-why-card {
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 2.5rem;
+    }
+
+    .sdd-card-heading {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0 0 2rem 0;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 0.75rem;
+    }
+
+    .sdd-benefits-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .sdd-benefits-list li {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .sdd-icon-box {
+        width: 32px;
+        height: 32px;
+        background-color: #e0f2fe;
+        color: #0284c7;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .sdd-benefits-list strong {
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 0.25rem;
+    }
+
+    .sdd-benefits-list p {
+        font-size: 0.92rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    /* RIGHT SUMMARY BOX */
+    .sdd-why-summary-box {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        border-radius: 20px;
+        padding: 2.5rem;
+        color: #ffffff;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+        position: sticky;
+        top: 100px;
+    }
+
+    .sdd-summary-badge {
+        display: inline-block;
+        background-color: rgba(56, 189, 248, 0.15);
+        color: #38bdf8;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .sdd-why-summary-box h3 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.3;
+    }
+
+    .sdd-why-summary-box p {
+        font-size: 0.95rem;
+        color: #cbd5e1;
+        margin: 0 0 2rem 0;
+        line-height: 1.5;
+    }
+
+    .sdd-summary-perks {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+        border-top: 1px solid #334155;
+        padding-top: 1.5rem;
+    }
+
+    .sdd-perk-item {
+        font-size: 0.9rem;
+        color: #e2e8f0;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sdd-why-wa-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #25d366;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 800;
+        text-decoration: none;
+        padding: 14px 20px;
+        border-radius: 50px;
+        box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+        transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .sdd-why-wa-btn:hover {
+        background-color: #1da851;
+        transform: translateY(-2px);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+        .sdd-why-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .sdd-why-summary-box {
+            position: static;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .sdd-why-title {
+            font-size: 2rem;
+        }
+
+        .sdd-why-card {
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+<!-- WHY SAFE DRIVER DUBAI SECTION -->
+<section class="sdd-why-section">
+    <div class="sdd-why-container">
+        
+        <!-- MAIN HEADINGS -->
+        <div class="sdd-why-header">
+            <span class="sdd-why-badge">Your Ultimate Driving Solution</span>
+            <h2 class="sdd-why-title">Why Safe Driver Dubai</h2>
+            <p class="sdd-why-subtitle">Experience hassle-free mobility with Dubai's most reliable and professional chauffeur service.</p>
+        </div>
+
+        <!-- BENEFITS CONTENT GRID -->
+        <div class="sdd-why-grid">
+            
+            <!-- LEFT COLUMN: Key Value Points -->
+            <div class="sdd-why-card">
+                <h3 class="sdd-card-heading">Benefits of Hiring a Safe Driver</h3>
+                
+                <ul class="sdd-benefits-list">
+                    <li>
+                        <div class="sdd-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>RTA-Certified & Fully Vetted Drivers</strong>
+                            <p>Every chauffeur is legally licensed, background-checked, and highly experienced in navigating all UAE routes safely.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="sdd-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Drive in the Comfort of Your Own Vehicle</strong>
+                            <p>Enjoy the luxury of being driven in your personal car without the expense or stress of maintaining a fleet vehicle.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="sdd-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Zero Visa, Insurance & Legal Liabilities</strong>
+                            <p>Skip the hassle of driver sponsorship, employment visas, medical insurance, and end-of-service benefits—we manage everything.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="sdd-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Guaranteed Replacement Continuity</strong>
+                            <p>If your assigned driver is sick or takes leave, an immediate replacement driver is dispatched to ensure uninterrupted service.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="sdd-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Maximum Productivity & Time Efficiency</strong>
+                            <p>Convert commuting hours into productive time by catching up on emails, answering calls, or simply relaxing in traffic.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="sdd-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div>
+                            <strong>Transparent Pricing & No Hidden Fees</strong>
+                            <p>Flexible monthly packages with fixed rates, so you never have to worry about unexpected surcharges or hidden costs.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- RIGHT COLUMN: CTA / Highlight Box -->
+            <div class="sdd-why-summary-box">
+                <div class="sdd-summary-badge">24/7 Premium Support</div>
+                <h3>Ready to Upgrade Your Daily Commute?</h3>
+                <p>Hire a dedicated driver for your personal or corporate needs in Dubai today.</p>
+                
+                <div class="sdd-summary-perks">
+                    <div class="sdd-perk-item">
+                        <span>⚡</span> Fast Deployment (24-48 Hrs)
+                    </div>
+                    <div class="sdd-perk-item">
+                        <span>🛡️</span> 100% Legal & Safe
+                    </div>
+                    <div class="sdd-perk-item">
+                        <span>📱</span> Instant WhatsApp Booking
+                    </div>
+                </div>
+
+                <a href="https://wa.me/923325405893?text=Hi,%20I%20would%20like%20to%20hire%20a%20safe%20driver." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="sdd-why-wa-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff" stroke="none"></path>
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                    </svg>
+                    Book Your Safe Driver
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote Component</title>
+    <style>
+        /* BASE & RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .sdd-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* --------------------------------------------------
+           GET A QUOTE SECTION
+        -------------------------------------------------- */
+        .sdd-quote-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            position: relative;
+        }
+
+        .sdd-quote-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        /* Left Column: Heading & Value Prop */
+        .sdd-quote-tag {
+            display: inline-block;
+            background-color: rgba(2, 132, 199, 0.15);
+            color: #38bdf8;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-quote-title {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-quote-title span {
+            color: #38bdf8;
+        }
+
+        .sdd-quote-desc {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .sdd-quote-perks {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .sdd-perk-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        .sdd-perk-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #0284c7;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Fast WhatsApp Booking Box */
+        .sdd-fast-wa-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .sdd-fast-wa-box h4 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .sdd-fast-wa-box p {
+            font-size: 0.88rem;
+            color: #94a3b8;
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-wa-direct-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 14px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .sdd-wa-direct-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Right Column: Interactive Form */
+        .sdd-quote-card {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem;
+            color: #0f172a;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .sdd-card-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .sdd-card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .sdd-card-header p {
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        .sdd-form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 0.4rem;
+        }
+
+        .sdd-form-input,
+        .sdd-form-select {
+            width: 100%;
+            padding: 12px 16px;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #0f172a;
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .sdd-form-input:focus,
+        .sdd-form-select:focus {
+            border-color: #0284c7;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1);
+        }
+
+        .sdd-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Submit via WhatsApp Button */
+        .sdd-form-submit-btn {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #0284c7;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 14px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+        }
+
+        .sdd-form-submit-btn:hover {
+            background-color: #0369a1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .sdd-quote-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .sdd-quote-title {
+                font-size: 2rem;
+            }
+
+            .sdd-quote-card {
+                padding: 1.5rem;
+            }
+
+            .sdd-form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- GET A QUOTE SECTION -->
+    <section class="sdd-quote-section">
+        <div class="sdd-container">
+            <div class="sdd-quote-grid">
+                
+                <!-- Left Content: Value Proposition & Direct WhatsApp -->
+                <div class="sdd-quote-left">
+                    <span class="sdd-quote-tag">Instant Pricing</span>
+                    <h2 class="sdd-quote-title">Get an Immediate <span>Fare Quote</span></h2>
+                    <p class="sdd-quote-desc">
+                        Looking for a private driver, school commute, or airport transfer in Dubai? Fill out your ride details or send a quick WhatsApp message to get instant availability and custom rates.
+                    </p>
+
+                    <div class="sdd-quote-perks">
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Transparent, fixed prices with zero hidden charges</span>
+                        </div>
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Instant booking confirmation within minutes</span>
+                        </div>
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Professional, licensed drivers across all UAE routes</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Fast WhatsApp Access -->
+                    <div class="sdd-fast-wa-box">
+                        <h4>Need a Ride Immediately?</h4>
+                        <p>Skip filling out forms and talk directly with our dispatch team on WhatsApp right now.</p>
+                        <a href="https://wa.me/923325405893?text=Hi,%20I%20need%20a%20quick%20quote%20for%20a%20safe%20driver%20service." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="sdd-wa-direct-btn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                            </svg>
+                            Book Now via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content: Custom Quote Form -->
+                <div class="sdd-quote-card">
+                    <div class="sdd-card-header">
+                        <h3>Calculate Your Fare</h3>
+                        <p>Complete the form below to receive your tailored estimate.</p>
+                    </div>
+
+                    <form id="quoteForm">
+                        <div class="sdd-form-group">
+                            <label class="sdd-form-label" for="serviceType">Select Service</label>
+                            <select id="serviceType" class="sdd-form-select" required>
+                                <option value="Car with Driver">Car with Driver</option>
+                                <option value="School Pick & Drop">School Pick & Drop</option>
+                                <option value="Airport Transfer">Airport Transfer</option>
+                                <option value="Daily Commute / City Tour">Daily Commute / City Tour</option>
+                            </select>
+                        </div>
+
+                        <div class="sdd-form-row">
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="pickupLocation">Pickup Location</label>
+                                <input type="text" id="pickupLocation" class="sdd-form-input" placeholder="e.g. DIFC, Dubai" required>
+                            </div>
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="dropLocation">Drop-off Location</label>
+                                <input type="text" id="dropLocation" class="sdd-form-input" placeholder="e.g. DXB Airport" required>
+                            </div>
+                        </div>
+
+                        <div class="sdd-form-row">
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="travelDate">Date</label>
+                                <input type="date" id="travelDate" class="sdd-form-input" required>
+                            </div>
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="travelTime">Time</label>
+                                <input type="time" id="travelTime" class="sdd-form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="sdd-form-group">
+                            <label class="sdd-form-label" for="customerName">Your Name</label>
+                            <input type="text" id="customerName" class="sdd-form-input" placeholder="Enter your full name" required>
+                        </div>
+
+                        <!-- Button Sends Prefilled Form Data Directly to WhatsApp -->
+                        <button type="button" onclick="sendQuoteToWhatsApp()" class="sdd-form-submit-btn">
+                            Get Quote via WhatsApp →
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM TO WHATSAPP CONVERSION SCRIPT -->
+    <script>
+        function sendQuoteToWhatsApp() {
+            // Retrieve form values
+            const service = document.getElementById("serviceType").value;
+            const pickup = document.getElementById("pickupLocation").value;
+            const drop = document.getElementById("dropLocation").value;
+            const date = document.getElementById("travelDate").value;
+            const time = document.getElementById("travelTime").value;
+            const name = document.getElementById("customerName").value;
+
+            // Simple Form Validation
+            if (!pickup || !drop || !date || !time || !name) {
+                alert("Please fill in all fields to request a quote.");
+                return;
+            }
+
+            // Target phone number (Replace with your actual business number)
+            const phoneNumber = "923325405893";
+
+            // Format message string
+            const message = `Hello Safe Driver Dubai! 👋%0A%0AI would like to request a quote for a ride:%0A%0A` +
+                `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                `🚖 *Service:* ${encodeURIComponent(service)}%0A` +
+                `📍 *Pickup:* ${encodeURIComponent(pickup)}%0A` +
+                `🏁 *Drop-off:* ${encodeURIComponent(drop)}%0A` +
+                `📅 *Date:* ${encodeURIComponent(date)}%0A` +
+                `⏰ *Time:* ${encodeURIComponent(time)}%0A%0A` +
+                `Please let me know availability and pricing!`;
+
+            // Open WhatsApp Chat
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Driver Only FAQs</title>
+    <style>
+        /* BASE & RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .sdd-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* FAQ SECTION STYLES */
+        .sdd-faq-section {
+            padding: 5rem 0;
+            background-color: #f8fafc;
+        }
+
+        .sdd-faq-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .sdd-faq-badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: 1px solid #bae6fd;
+            margin-bottom: 1rem;
+        }
+
+        .sdd-faq-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .sdd-faq-title span {
+            color: #0284c7;
+        }
+
+        .sdd-faq-subtitle {
+            font-size: 1.05rem;
+            color: #64748b;
+        }
+
+        /* ACCORDION CONTAINER */
+        .sdd-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sdd-faq-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .sdd-faq-item.active {
+            border-color: #0284c7;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.08);
+        }
+
+        /* FAQ TRIGGER BUTTON */
+        .sdd-faq-trigger {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            cursor: pointer;
+            transition: color 0.25s ease;
+            gap: 1rem;
+        }
+
+        .sdd-faq-trigger:hover {
+            color: #0284c7;
+        }
+
+        /* DROPDOWN ARROW ICON */
+        .sdd-faq-icon {
+            width: 28px;
+            height: 28px;
+            background-color: #f1f5f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: #0284c7;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .sdd-faq-item.active .sdd-faq-icon {
+            transform: rotate(180deg);
+            background-color: #0284c7;
+            color: #ffffff;
+        }
+
+        /* FAQ ANSWER CONTENT PANEL */
+        .sdd-faq-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+            background-color: #ffffff;
+        }
+
+        .sdd-faq-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #475569;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            border-top: 1px solid transparent;
+        }
+
+        .sdd-faq-item.active .sdd-faq-content {
+            border-top-color: #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 640px) {
+            .sdd-faq-title {
+                font-size: 2rem;
+            }
+
+            .sdd-faq-trigger {
+                padding: 1rem 1.25rem;
+                font-size: 1rem;
+            }
+
+            .sdd-faq-content {
+                padding: 0 1.25rem 1.25rem 1.25rem;
+                font-size: 0.92rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="sdd-faq-section">
+        <div class="sdd-container">
+            
+            <div class="sdd-faq-header">
+                <span class="sdd-faq-badge">Monthly Service Info</span>
+                <h2 class="sdd-faq-title">Monthly Driver Only <span>FAQs</span></h2>
+                <p class="sdd-faq-subtitle">Everything you need to know about hiring a dedicated personal driver for your own vehicle.</p>
+            </div>
+
+            <div class="sdd-accordion">
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>1. What is included in the Monthly Driver Only service?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            You receive a dedicated, fully vetted, and professional driver to drive your personal or company vehicle for a fixed number of hours/days per month, taking care of all your daily personal or business travel needs.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>2. Does the driver drive my vehicle or your company car?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            With the "Driver Only" package, our professional driver will exclusively drive your personal or corporate vehicle. If you require a vehicle as well, we offer full "Car with Driver" packages.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>3. What are the driver’s working hours and weekly off days?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Our standard monthly package covers 10 to 12 working hours per day, 6 days a week (with 1 mandatory weekly off day). Customized schedules and extended hours can be arranged based on your requirements.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>4. Are your drivers background-checked and licensed?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Yes, all our drivers undergo thorough background checks, criminal record verifications, driving test evaluations, and health screenings. They possess valid local driving licenses and extensive route knowledge.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>5. Who is responsible for fuel, parking, and toll fees?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Since the driver operates your vehicle, all vehicle-related expenses—including fuel, parking fees, road tolls, and vehicle maintenance—are covered by the vehicle owner/client.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>6. What happens if my assigned driver is sick or takes leave?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            We guarantee zero downtime. If your primary driver requests leave or falls ill, we immediately deploy a qualified replacement driver at no additional cost.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>7. How does overtime work if I need the driver past working hours?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Any duty performed beyond the agreed daily hours or on the driver's weekly off day is calculated on a fixed, affordable hourly overtime rate, which is added to your monthly invoice.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>8. Is my vehicle covered by insurance while your driver is operating it?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Your personal vehicle insurance applies during operation. However, all our drivers are professionally trained to adhere strictly to traffic safety guidelines to ensure safe, incident-free driving.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>9. Can I request a replacement if I am not satisfied with the assigned driver?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Yes, client satisfaction is our priority. If you feel the assigned driver is not the right fit for any reason, simply contact our support team, and we will arrange a replacement driver smoothly.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>10. How do I book a monthly driver or inquire about rates?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            You can book directly by filling out our online quote form, calling our office, or sending us a message on WhatsApp to discuss your location and monthly driver schedule.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqItems = document.querySelectorAll(".sdd-faq-item");
+
+            faqItems.forEach(item => {
+                const trigger = item.querySelector(".sdd-faq-trigger");
+                const panel = item.querySelector(".sdd-faq-panel");
+
+                trigger.addEventListener("click", () => {
+                    const isActive = item.classList.contains("active");
+
+                    // Close all other open items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove("active");
+                        otherItem.querySelector(".sdd-faq-panel").style.maxHeight = null;
+                    });
+
+                    // Open clicked item if closed
+                    if (!isActive) {
+                        item.classList.add("active");
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+</html>
+ 
+<body>
+    
+    <!-- FOOTER SECTION -->
+    <footer class="sdd-footer">
+        <div class="sdd-container">
+            <div class="sdd-footer-grid">
+                
+                <!-- Column 1: Brand Info -->
+                <div class="sdd-footer-col">
+                    <a href="index.html" class="sdd-footer-brand">
+                        SAFE DRIVER <span>DUBAI</span>
+                    </a>
+                    <p class="sdd-footer-about">
+                        Your trusted partner for professional chauffeur, airport transfer, city tour, and daily commute services across Dubai. Premium comfort, safety, and reliability guaranteed.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div class="sdd-footer-col">
+                    <h4 class="sdd-footer-heading">Quick Links</h4>
+                    <ul class="sdd-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Our Services -->
+                <div class="sdd-footer-col">
+                    <h4 class="sdd-footer-heading">Our Services</h4>
+                    <ul class="sdd-footer-links">
+                        <li><a href="airport-transfer.html">Airport Transfers</a></li>
+                        <li><a href="city-tour.html">Private City Tours</a></li>
+                        <li><a href="school-pick-drop.html">School Pick & Drop</a></li>
+                        <li><a href="car-with-driver.html">Car with Driver</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact & WhatsApp -->
+                <div class="sdd-footer-col">
+                    <h4 class="sdd-footer-heading">Contact Us</h4>
+                    
+                    <div class="sdd-contact-item">
+                        <span class="sdd-contact-icon">📍</span>
+                        <span>DIFC, Dubai, United Arab Emirates</span>
+                    </div>
+                    
+                    <div class="sdd-contact-item">
+                        <span class="sdd-contact-icon">✉️</span>
+                        <a href="mailto:safedriverdubai3@gmail.com" style="color: #cbd5e1;">safedriverdubai3@gmail.com</a>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=923325405893&text=Hi%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn-wa">Book a Safe Driver</a>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff" stroke="none"></path>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                        </svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+                
+            </div>
+            
+            <!-- Bottom Copyright & Legal Links -->
+            <div class="sdd-footer-bottom">
+                <p>&copy; 2026 Safe Driver Dubai. All Rights Reserved.</p>
+                <ul class="sdd-footer-legal">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
+</html>

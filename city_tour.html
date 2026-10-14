@@ -1,0 +1,3489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Driver Dubai- Private City Tour Service</title>
+    <style>
+        /* BASE & RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .sdd-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* --------------------------------------------------
+           1. HEADER & NAVIGATION BAR
+        -------------------------------------------------- */
+        .sdd-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .sdd-nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        /* Company Brand Name */
+        .sdd-brand-name {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sdd-brand-name span {
+            color: #0284c7;
+        }
+
+        /* Navigation Links (Right Side) */
+        .sdd-nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .sdd-nav-item {
+            position: relative;
+        }
+
+        .sdd-nav-link {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #475569;
+            padding: 10px 0;
+            transition: color 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sdd-nav-link:hover,
+        .sdd-nav-link.active {
+            color: #0284c7;
+        }
+
+        /* Services Dropdown Menu */
+        .sdd-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 240px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 0.75rem 0;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.25s ease;
+            list-style: none;
+        }
+
+        .sdd-dropdown-item a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #334155;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .sdd-dropdown-item a:hover {
+            background-color: #f1f5f9;
+            color: #0284c7;
+            padding-left: 25px;
+        }
+
+        /* Show Dropdown on Hover */
+        .sdd-nav-item.dropdown:hover .sdd-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .sdd-dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.25s ease;
+        }
+
+        .sdd-nav-item.dropdown:hover .sdd-dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Mobile Hamburger Toggle */
+        .sdd-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #0f172a;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --------------------------------------------------
+           2. CITY TOUR INTRODUCTION SECTION
+        -------------------------------------------------- */
+        .sdd-intro-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f1f5f9 100%);
+        }
+
+        .sdd-intro-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        /* Left Content Area */
+        .sdd-intro-badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: 1px solid #bae6fd;
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-intro-title {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 1.25rem;
+            color: #0f172a;
+        }
+
+        .sdd-intro-title span {
+            color: #0284c7;
+        }
+
+        .sdd-intro-description {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .sdd-intro-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .sdd-feature-point {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.98rem;
+            color: #1e293b;
+            font-weight: 700;
+        }
+
+        .sdd-feature-point span {
+            color: #0284c7;
+            font-size: 1.1rem;
+        }
+
+        /* Action Buttons */
+        .sdd-intro-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .sdd-wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 14px 28px;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.25s ease;
+        }
+
+        .sdd-wa-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .sdd-secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #ffffff;
+            color: #0f172a;
+            border: 2px solid #cbd5e1;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 14px 26px;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .sdd-secondary-btn:hover {
+            border-color: #0284c7;
+            color: #0284c7;
+            transform: translateY(-1px);
+        }
+
+        /* Right Visual Card Area */
+        .sdd-intro-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .sdd-card-highlight {
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sdd-card-highlight h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .sdd-card-highlight p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .sdd-perks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .sdd-perk-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1.25rem;
+        }
+
+        .sdd-perk-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sdd-perk-box strong {
+            display: block;
+            font-size: 0.92rem;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .sdd-perk-box span {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* --------------------------------------------------
+           RESPONSIVE MOBILE STYLES
+        -------------------------------------------------- */
+        @media (max-width: 992px) {
+            .sdd-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .sdd-mobile-toggle {
+                display: block;
+            }
+
+            .sdd-nav-menu {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+                border-bottom: 1px solid #e2e8f0;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                display: none;
+            }
+
+            .sdd-nav-menu.active {
+                display: flex;
+            }
+
+            .sdd-dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                width: 100%;
+                background: none;
+                border: none;
+                box-shadow: none;
+                padding-left: 1rem;
+                display: none;
+            }
+
+            .sdd-nav-item.dropdown.active .sdd-dropdown-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .sdd-intro-title {
+                font-size: 2.25rem;
+            }
+
+            .sdd-perks-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sdd-wa-btn, .sdd-secondary-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Tour - Chauffeur Service</title>
+    <style>
+        /* BASE RESET & FONTS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #031822;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           CITY TOUR SECTION WITH BACKGROUND IMAGE
+        -------------------------------------------------- */
+        .city-tour-section {
+            position: relative;
+            padding: 5.5rem 1.25rem;
+            /* High-resolution Chauffeur & City background with Cyan/Teal Overlay */
+            background: 
+                linear-gradient(135deg, rgba(2, 28, 41, 0.90) 0%, rgba(5, 59, 81, 0.85) 50%, rgba(0, 150, 180, 0.75) 100%),
+                url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+            border-bottom: 2px solid #00f2fe;
+            overflow: hidden;
+        }
+
+        .city-tour-container {
+            max-width: 950px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* HEADER BLOCK */
+        .tour-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .tour-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 242, 254, 0.15);
+            color: #79f1f7;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 22px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .tour-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2fe;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        /* MAIN HEADING */
+        .tour-main-heading {
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .tour-main-heading span {
+            color: #00f2fe;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ATTRACTIVE SUBHEADING */
+        .tour-sub-heading {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #e0f7fa;
+            letter-spacing: -0.3px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* DESCRIPTION & HIGHLIGHTS GRID */
+        .tour-content-card {
+            background-color: rgba(4, 40, 58, 0.75);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .tour-intro-text {
+            font-size: 1.1rem;
+            color: #b2ebf2;
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .tour-bullets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .tour-bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.125rem;
+            background-color: rgba(6, 55, 80, 0.6);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            border-radius: 14px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .tour-bullet-item:hover {
+            border-color: #00f2fe;
+            transform: translateY(-3px);
+            background-color: rgba(6, 55, 80, 0.85);
+            box-shadow: 0 8px 20px rgba(0, 242, 254, 0.2);
+        }
+
+        .tour-icon {
+            font-size: 1.5rem;
+            background-color: rgba(0, 242, 254, 0.12);
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        .tour-text h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .tour-text p {
+            font-size: 0.925rem;
+            color: #b2ebf2;
+            line-height: 1.5;
+        }
+
+        /* WHATSAPP ACTION GROUP */
+        .tour-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .tour-wa-main-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tour-wa-main-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+        }
+
+        .tour-wa-sub-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            width: 100%;
+        }
+
+        .tour-wa-sub-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: rgba(4, 40, 58, 0.85);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .tour-wa-sub-btn:hover {
+            background-color: rgba(0, 242, 254, 0.2);
+            border-color: #00f2fe;
+            color: #e0f7fa;
+        }
+
+        /* TRUST FOOTER BAR */
+        .tour-trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 242, 254, 0.2);
+            font-size: 0.875rem;
+            color: #80deea;
+        }
+
+        .tour-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tour-trust-item span {
+            color: #00f2fe;
+            font-weight: bold;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .tour-main-heading {
+                font-size: 2.5rem;
+            }
+
+            .tour-sub-heading {
+                font-size: 1.15rem;
+            }
+
+            .tour-bullets-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-wa-sub-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-trust-bar {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: center;
+            }
+
+            .tour-content-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. HEADER SECTION -->
+    <header class="sdd-header">
+        <div class="sdd-container sdd-nav-container">
+            
+            <!-- Company Name / Logo -->
+            <a href="index.html" class="sdd-brand-name">
+                Safe Driver<span>Dubai</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="sdd-mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">☰</button>
+
+            <!-- Navigation Links -->
+            <ul class="sdd-nav-menu" id="navMenu">
+                <li class="sdd-nav-item">
+                    <a href="index.html" class="sdd-nav-link active">Home</a>
+                </li>
+                
+                <li class="sdd-nav-item">
+                    <a href="About.html" class="sdd-nav-link">About Us</a>
+                </li>
+
+                <!-- Services Dropdown -->
+                <li class="sdd-nav-item dropdown" id="servicesDropdown">
+                    <a href="service.html" class="sdd-nav-link">
+                        Services <span class="sdd-dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="sdd-dropdown-menu">
+                        <li class="sdd-dropdown-item"><a href="city-tour.html">Private City Tours</a></li>
+                        <li class="sdd-dropdown-item"><a href="full-day-sightseeing.html">Full-Day Sightseeing</a></li>
+                        <li class="sdd-dropdown-item"><a href="custom-itinerary.html">Customized Landmarks Tour</a></li>
+                        <li class="sdd-dropdown-item"><a href="group-excursions.html">Group & Family Excursions</a></li>
+                    </ul>
+                </li>
+
+                <li class="sdd-nav-item">
+                    <a href="blog.html" class="sdd-nav-link">Blog</a>
+                </li>
+
+                <li class="sdd-nav-item">
+                    <a href="contact.html" class="sdd-nav-link">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Tour - Chauffeur Service</title>
+    <style>
+        /* BASE RESET & FONTS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #031822;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           CITY TOUR SECTION WITH BACKGROUND IMAGE
+        -------------------------------------------------- */
+        .city-tour-section {
+            position: relative;
+            padding: 5.5rem 1.25rem;
+            /* High-resolution Chauffeur & City background with Cyan/Teal Overlay */
+            background: 
+                linear-gradient(135deg, rgba(2, 28, 41, 0.90) 0%, rgba(5, 59, 81, 0.85) 50%, rgba(0, 150, 180, 0.75) 100%),
+                url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+            border-bottom: 2px solid #00f2fe;
+            overflow: hidden;
+        }
+
+        .city-tour-container {
+            max-width: 950px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* HEADER BLOCK */
+        .tour-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .tour-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 242, 254, 0.15);
+            color: #79f1f7;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 22px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .tour-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2fe;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        /* MAIN HEADING */
+        .tour-main-heading {
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .tour-main-heading span {
+            color: #00f2fe;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ATTRACTIVE SUBHEADING */
+        .tour-sub-heading {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #e0f7fa;
+            letter-spacing: -0.3px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* DESCRIPTION & HIGHLIGHTS GRID */
+        .tour-content-card {
+            background-color: rgba(4, 40, 58, 0.75);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .tour-intro-text {
+            font-size: 1.1rem;
+            color: #b2ebf2;
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .tour-bullets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .tour-bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.125rem;
+            background-color: rgba(6, 55, 80, 0.6);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            border-radius: 14px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .tour-bullet-item:hover {
+            border-color: #00f2fe;
+            transform: translateY(-3px);
+            background-color: rgba(6, 55, 80, 0.85);
+            box-shadow: 0 8px 20px rgba(0, 242, 254, 0.2);
+        }
+
+        .tour-icon {
+            font-size: 1.5rem;
+            background-color: rgba(0, 242, 254, 0.12);
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        .tour-text h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .tour-text p {
+            font-size: 0.925rem;
+            color: #b2ebf2;
+            line-height: 1.5;
+        }
+
+        /* WHATSAPP ACTION GROUP */
+        .tour-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .tour-wa-main-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tour-wa-main-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+        }
+
+        .tour-wa-sub-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            width: 100%;
+        }
+
+        .tour-wa-sub-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: rgba(4, 40, 58, 0.85);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .tour-wa-sub-btn:hover {
+            background-color: rgba(0, 242, 254, 0.2);
+            border-color: #00f2fe;
+            color: #e0f7fa;
+        }
+
+        /* TRUST FOOTER BAR */
+        .tour-trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 242, 254, 0.2);
+            font-size: 0.875rem;
+            color: #80deea;
+        }
+
+        .tour-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tour-trust-item span {
+            color: #00f2fe;
+            font-weight: bold;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .tour-main-heading {
+                font-size: 2.5rem;
+            }
+
+            .tour-sub-heading {
+                font-size: 1.15rem;
+            }
+
+            .tour-bullets-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-wa-sub-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-trust-bar {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: center;
+            }
+
+            .tour-content-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CITY TOUR SECTION -->
+    <section class="city-tour-section">
+        <div class="city-tour-container">
+            
+            <!-- Header Block -->
+            <div class="tour-header">
+                <div class="tour-badge">
+                    <span class="tour-badge-dot"></span>
+                    Exclusive Private Sightseeing
+                </div>
+                <!-- Main Heading -->
+                <h2 class="tour-main-heading">
+                    Exclusive <span>City Tour</span>
+                </h2>
+                <!-- Customer Attractive Sub Heading -->
+                <h3 class="tour-sub-heading">
+                    Explore Iconic City Landmarks in Pure Comfort & Luxury
+                </h3>
+            </div>
+
+            <!-- Description Block with Bullets -->
+            <div class="tour-content-card">
+                <p class="tour-intro-text">
+                    Discover iconic skylines, historic culture, and world-class landmarks without navigation stress. Sit back in luxury as our private executive driver crafts a seamless city tour experience tailored entirely to your schedule.
+                </p>
+
+                <div class="tour-bullets-grid">
+                    
+                    <div class="tour-bullet-item">
+                        <div class="tour-icon">🗺️</div>
+                        <div class="tour-text">
+                            <h4>Customizable Route Itinerary</h4>
+                            <p>Pick your favorite destinations or let our expert local chauffeurs guide you through the city's best highlights.</p>
+                        </div>
+                    </div>
+
+                    <div class="tour-bullet-item">
+                        <div class="tour-icon">🏛️</div>
+                        <div class="tour-text">
+                            <h4>Door-to-Door Pickup & Drop-Off</h4>
+                            <p>Enjoy hassle-free luxury pick-ups directly from your hotel, home, or airport terminal.</p>
+                        </div>
+                    </div>
+
+                    <div class="tour-bullet-item">
+                        <div class="tour-icon">⏱️</div>
+                        <div class="tour-text">
+                            <h4>Flexible Tour Packages</h4>
+                            <p>Choose between quick 4-hour highlight tours or comprehensive full-day city exploration packages.</p>
+                        </div>
+                    </div>
+
+                    <div class="tour-bullet-item">
+                        <div class="tour-icon">📸</div>
+                        <div class="tour-text">
+                            <h4>Photo Stops at Your Pace</h4>
+                            <p>Take photo breaks whenever you like—no rushed group buses or rigid tourist schedules.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- WhatsApp Action Buttons -->
+            <div class="tour-cta-group">
+                
+                <!-- Main WhatsApp CTA Button -->
+                <a href="https://wa.me/923325405893?text=Hi,%20I%20would%20like%20to%20book%20a%20private%20City%20Tour%20chauffeur." target="_blank" rel="noopener noreferrer" class="tour-wa-main-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                    </svg>
+                    Book City Tour on WhatsApp
+                </a>
+
+                <!-- Quick Sub Buttons -->
+                <div class="tour-wa-sub-grid">
+                    <a href="https://wa.me/923325405893?text=Hi,%20I%20want%20to%20inquire%20about%20a%20Half-Day%20City%20Tour." target="_blank" class="tour-wa-sub-btn">
+                        <span>🏙️</span> Half-Day City Tour
+                    </a>
+                    <a href="https://wa.me/923325405893?text=Hi,%20I%20want%20to%20inquire%20about%20a%20Full-Day%20City%20Tour." target="_blank" class="tour-wa-sub-btn">
+                        <span>🌇</span> Full-Day Sightseeing
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Trust Bar -->
+            <div class="tour-trust-bar">
+                <div class="tour-trust-item">
+                    <span>★</span> Private & Personalized Rides
+                </div>
+                <div class="tour-trust-item">
+                    <span>★</span> Professional English-Speaking Drivers
+                </div>
+                <div class="tour-trust-item">
+                    <span>★</span> All-Inclusive Hourly Rates
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Transfers - Chauffeur Service</title>
+    <style>
+        /* BASE RESET & FONTS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #031822;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           AIRPORT TRANSFERS SECTION
+        -------------------------------------------------- */
+        .apt-section {
+            position: relative;
+            padding: 5.5rem 1.25rem;
+            /* High-resolution Luxury Airport Transfer background with Cyan/Teal Overlay */
+            background: 
+                linear-gradient(135deg, rgba(2, 28, 41, 0.90) 0%, rgba(5, 59, 81, 0.85) 50%, rgba(0, 150, 180, 0.75) 100%),
+                url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+            border-bottom: 2px solid #00f2fe;
+            overflow: hidden;
+        }
+
+        .apt-container {
+            max-width: 950px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* HEADER BLOCK */
+        .apt-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .apt-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 242, 254, 0.15);
+            color: #79f1f7;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 22px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .apt-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2fe;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        /* MAIN HEADING */
+        .apt-main-heading {
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .apt-main-heading span {
+            color: #00f2fe;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SUBHEADING */
+        .apt-sub-heading {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #e0f7fa;
+            letter-spacing: -0.3px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* DESCRIPTION & BULLETS CARD */
+        .apt-content-card {
+            background-color: rgba(4, 40, 58, 0.75);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .apt-intro-text {
+            font-size: 1.1rem;
+            color: #b2ebf2;
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .apt-bullets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .apt-bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.125rem;
+            background-color: rgba(6, 55, 80, 0.6);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            border-radius: 14px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .apt-bullet-item:hover {
+            border-color: #00f2fe;
+            transform: translateY(-3px);
+            background-color: rgba(6, 55, 80, 0.85);
+            box-shadow: 0 8px 20px rgba(0, 242, 254, 0.2);
+        }
+
+        .apt-icon {
+            font-size: 1.5rem;
+            background-color: rgba(0, 242, 254, 0.12);
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        .apt-text h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .apt-text p {
+            font-size: 0.925rem;
+            color: #b2ebf2;
+            line-height: 1.5;
+        }
+
+        /* WHATSAPP ACTION GROUP */
+        .apt-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .apt-wa-main-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .apt-wa-main-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+        }
+
+        .apt-wa-sub-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            width: 100%;
+        }
+
+        .apt-wa-sub-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: rgba(4, 40, 58, 0.85);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .apt-wa-sub-btn:hover {
+            background-color: rgba(0, 242, 254, 0.2);
+            border-color: #00f2fe;
+            color: #e0f7fa;
+        }
+
+        /* TRUST FOOTER BAR */
+        .apt-trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 242, 254, 0.2);
+            font-size: 0.875rem;
+            color: #80deea;
+        }
+
+        .apt-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .apt-trust-item span {
+            color: #00f2fe;
+            font-weight: bold;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .apt-main-heading {
+                font-size: 2.5rem;
+            }
+
+            .apt-sub-heading {
+                font-size: 1.15rem;
+            }
+
+            .apt-bullets-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .apt-wa-sub-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .apt-trust-bar {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: center;
+            }
+
+            .apt-content-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Driver Service - Safe Driver Dubai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #031822;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           TOUR DRIVER SECTION
+        -------------------------------------------------- */
+        .tour-driver-section {
+            position: relative;
+            padding: 5.5rem 1.25rem;
+            background: 
+                linear-gradient(135deg, rgba(2, 28, 41, 0.92) 0%, rgba(5, 59, 81, 0.88) 50%, rgba(0, 150, 180, 0.78) 100%),
+                url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+            border-bottom: 2px solid #00f2fe;
+            overflow: hidden;
+        }
+
+        .tour-driver-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* BADGE */
+        .tour-driver-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 242, 254, 0.15);
+            color: #79f1f7;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 22px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .tour-driver-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2fe;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        /* MAIN HEADING */
+        .tour-driver-heading {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .tour-driver-heading span {
+            color: #00f2fe;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SUB HEADING */
+        .tour-driver-subheading {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e0f7fa;
+            margin-bottom: 2rem;
+            letter-spacing: -0.2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* DESCRIPTION CARD */
+        .tour-driver-card {
+            background-color: rgba(4, 40, 58, 0.75);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .tour-driver-description {
+            font-size: 1.1rem;
+            color: #b2ebf2;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* WHATSAPP CHAT BUTTON */
+        .wa-chat-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .wa-chat-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .tour-driver-heading {
+                font-size: 2.4rem;
+            }
+
+            .tour-driver-subheading {
+                font-size: 1.15rem;
+            }
+
+            .tour-driver-card {
+                padding: 1.5rem;
+            }
+
+            .wa-chat-btn {
+                width: 100%;
+                font-size: 1rem;
+                padding: 16px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="tour-driver-section">
+        <div class="tour-driver-container">
+            
+            <!-- Badge -->
+            <div class="tour-driver-badge">
+                <span class="tour-driver-badge-dot"></span>
+                Safe Driver Dubai
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="tour-driver-heading">
+                Professional <span>Tour Driver</span> Services
+            </h1>
+
+            <!-- Sub Heading -->
+            <h2 class="tour-driver-subheading">
+                Explore the Best of Dubai & the UAE in Ultimate Comfort, Safety & Style
+            </h2>
+
+            <!-- Description Box -->
+            <div class="tour-driver-card">
+                <p class="tour-driver-description">
+                    Sit back, relax, and let our experienced, RTA-approved professional tour drivers navigate the city for you. Whether you are planning a full-day city sightseeing excursion, visiting famous landmarks, or taking a custom road trip across the UAE, our dedicated drivers ensure a seamless, punctual, and stress-free journey tailored to your schedule.
+                </p>
+            </div>
+
+            <!-- WhatsApp Chat Button -->
+            <a href="https://wa.me/923325405893?text=Hi,%20I%20would%20like%20to%20book%20a%20Tour%20Driver%20in%20Dubai." target="_blank" rel="noopener noreferrer" class="wa-chat-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                </svg>
+                Chat on WhatsApp to Book
+            </a>
+
+        </div>
+    </section>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Sightseeing - Safe Driver Dubai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #031822;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           DUBAI SIGHTSEEING SECTION
+        -------------------------------------------------- */
+        .sightseeing-section {
+            position: relative;
+            padding: 5.5rem 1.25rem;
+            background: 
+                linear-gradient(135deg, rgba(2, 28, 41, 0.92) 0%, rgba(5, 59, 81, 0.88) 50%, rgba(0, 150, 180, 0.78) 100%),
+                url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+            border-bottom: 2px solid #00f2fe;
+            overflow: hidden;
+        }
+
+        .sightseeing-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* BADGE */
+        .sightseeing-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 242, 254, 0.15);
+            color: #79f1f7;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 22px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .sightseeing-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2fe;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        /* MAIN HEADING */
+        .sightseeing-heading {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .sightseeing-heading span {
+            color: #00f2fe;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SUB HEADING */
+        .sightseeing-subheading {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e0f7fa;
+            margin-bottom: 2rem;
+            letter-spacing: -0.2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* DESCRIPTION CARD */
+        .sightseeing-card {
+            background-color: rgba(4, 40, 58, 0.75);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .sightseeing-description {
+            font-size: 1.1rem;
+            color: #b2ebf2;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* WHATSAPP CHAT BUTTON */
+        .wa-chat-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .wa-chat-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .sightseeing-heading {
+                font-size: 2.4rem;
+            }
+
+            .sightseeing-subheading {
+                font-size: 1.15rem;
+            }
+
+            .sightseeing-card {
+                padding: 1.5rem;
+            }
+
+            .wa-chat-btn {
+                width: 100%;
+                font-size: 1rem;
+                padding: 16px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="sightseeing-section">
+        <div class="sightseeing-container">
+            
+            <!-- Badge -->
+            <div class="sightseeing-badge">
+                <span class="sightseeing-badge-dot"></span>
+                Safe Driver Dubai
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="sightseeing-heading">
+                Dubai <span>Sightseeing</span> Tours
+            </h1>
+
+            <!-- Customer Attractive Sub Heading -->
+            <h2 class="sightseeing-subheading">
+                Experience Dubai's Iconic Attractions with Your Personal Luxury Driver
+            </h2>
+
+            <!-- Description Box -->
+            <div class="sightseeing-card">
+                <p class="sightseeing-description">
+                    Unlock the best of Dubai in pure luxury and personalized style. From the towering grandeur of the Burj Khalifa and the luxury of Palm Jumeirah to the rich heritage of Old Dubai, our expert local chauffeurs guide you seamlessly through the city's top landmarks. Forget parking hassles, crowded buses, and strict timelines—enjoy a tailor-made sightseeing journey at your own comfortable pace.
+                </p>
+            </div>
+
+            <!-- WhatsApp Chat Button -->
+            <a href="https://wa.me/923325405893?text=Hi,%20I%20want%20to%20book%20a%20Dubai%20Sightseeing%20tour." target="_blank" rel="noopener noreferrer" class="wa-chat-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                </svg>
+                Book Sightseeing Tour on WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us - City Tour - Safe Driver Dubai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #031822;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           WHY CHOOSE US - CITY TOUR SECTION
+        -------------------------------------------------- */
+        .why-choose-section {
+            position: relative;
+            padding: 5.5rem 1.25rem;
+            background: 
+                linear-gradient(135deg, rgba(2, 28, 41, 0.94) 0%, rgba(5, 59, 81, 0.90) 50%, rgba(0, 150, 180, 0.82) 100%),
+                url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+            border-bottom: 2px solid #00f2fe;
+            overflow: hidden;
+        }
+
+        .why-choose-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* HEADER BLOCK */
+        .why-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .why-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 242, 254, 0.15);
+            color: #79f1f7;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 22px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .why-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2fe;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        /* MAIN HEADING */
+        .why-main-heading {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .why-main-heading span {
+            color: #00f2fe;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SUB HEADING */
+        .why-sub-heading {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #e0f7fa;
+            letter-spacing: -0.3px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* FEATURE REASONS GRID */
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .reason-card {
+            background-color: rgba(4, 40, 58, 0.75);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .reason-card:hover {
+            border-color: #00f2fe;
+            transform: translateY(-5px);
+            background-color: rgba(6, 55, 80, 0.85);
+            box-shadow: 0 15px 30px rgba(0, 242, 254, 0.25);
+        }
+
+        .reason-icon {
+            font-size: 2.2rem;
+            width: 65px;
+            height: 65px;
+            background-color: rgba(0, 242, 254, 0.12);
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem auto;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
+        }
+
+        .reason-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.6rem;
+            text-transform: capitalize;
+        }
+
+        .reason-desc {
+            font-size: 0.95rem;
+            color: #b2ebf2;
+            line-height: 1.6;
+        }
+
+        /* CTA BOX */
+        .why-cta-wrapper {
+            text-align: center;
+        }
+
+        .wa-chat-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .wa-chat-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .reasons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .why-main-heading {
+                font-size: 2.3rem;
+            }
+
+            .why-sub-heading {
+                font-size: 1.1rem;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wa-chat-btn {
+                width: 100%;
+                font-size: 0.95rem;
+                padding: 16px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="why-choose-section">
+        <div class="why-choose-container">
+            
+            <!-- Header Block -->
+            <div class="why-header">
+                <div class="why-badge">
+                    <span class="why-badge-dot"></span>
+                    Safe Driver Dubai Advantage
+                </div>
+                <!-- Main Heading -->
+                <h2 class="why-main-heading">
+                    Why Choose Us For Your <span>City Tour</span>
+                </h2>
+                <!-- Sub Heading -->
+                <h3 class="why-sub-heading">
+                    The Smartest, Most Relaxing Way to Experience Dubai
+                </h3>
+            </div>
+
+            <!-- Reasons Grid -->
+            <div class="reasons-grid">
+                
+                <!-- Reason 1 -->
+                <div class="reason-card">
+                    <div class="reason-icon">👨‍✈️</div>
+                    <h4 class="reason-title">RTA-Certified Drivers</h4>
+                    <p class="reason-desc">Our highly trained, professional drivers know every shortcut, landmark, and hidden gem in Dubai for a smooth, safe ride.</p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="reason-card">
+                    <div class="reason-icon">📍</div>
+                    <h4 class="reason-title">100% Customized Route</h4>
+                    <p class="reason-desc">No rigid tourist bus schedules. Choose your own stops, spend as long as you want at each spot, and stop for photos anytime.</p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="reason-card">
+                    <div class="reason-icon">🏷️</div>
+                    <h4 class="reason-title">Transparent & Fixed Rates</h4>
+                    <p class="reason-desc">Enjoy clear hourly or full-day pricing with zero hidden charges, surge rates, or unexpected parking hassles.</p>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="reason-card">
+                    <div class="reason-icon">🛋️</div>
+                    <h4 class="reason-title">Travel in Your Own Luxury</h4>
+                    <p class="reason-desc">Relax in private comfort with air-conditioned luxury, personalized climate control, and full privacy for your group.</p>
+                </div>
+
+                <!-- Reason 5 -->
+                <div class="reason-card">
+                    <div class="reason-icon">⚡</div>
+                    <h4 class="reason-title">Instant Doorstep Pickup</h4>
+                    <p class="reason-desc">We pick you up directly from your hotel, apartment, or airport terminal and drop you back at your convenience.</p>
+                </div>
+
+                <!-- Reason 6 -->
+                <div class="reason-card">
+                    <div class="reason-icon">📱</div>
+                    <h4 class="reason-title">24/7 Fast Booking</h4>
+                    <p class="reason-desc">Book your private city tour driver in seconds with instant WhatsApp confirmation and 24/7 customer support.</p>
+                </div>
+
+            </div>
+
+            <!-- Call to Action -->
+            <div class="why-cta-wrapper">
+                <a href="https://wa.me/923325405893?text=Hi,%20I%20want%20to%20know%20more%20about%20booking%20a%20City%20Tour%20driver." target="_blank" rel="noopener noreferrer" class="wa-chat-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                    </svg>
+                    Book Your City Tour Ride on WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
+    <!-- 2. CITY TOUR INTRODUCTION SECTION -->
+    <section class="sdd-intro-section">
+        <div class="sdd-container">
+            <div class="sdd-intro-grid">
+                
+                <!-- Left Content Area -->
+                <div class="sdd-intro-content">
+                    <span class="sdd-intro-badge">Explore in Comfort</span>
+                    <h1 class="sdd-intro-title">Exclusive <span>Private City Tour</span> Services</h1>
+                    <p class="sdd-intro-description">
+                        Discover iconic landmarks, cultural heritage, and modern attractions at your own pace. Enjoy a customized sightseeing experience with knowledgeable local chauffeurs, flexible schedules, and private air-conditioned vehicles.
+                    </p>
+
+                    <div class="sdd-intro-features">
+                        <div class="sdd-feature-point">
+                            <span>✦</span> Fully Customizable Sightseeing Itineraries
+                        </div>
+                        <div class="sdd-feature-point">
+                            <span>✦</span> Experienced Local Chauffeurs & Knowledgeable Guides
+                        </div>
+                        <div class="sdd-feature-point">
+                            <span>✦</span> Hotel & Residence Door-to-Door Pickup & Drop-Off
+                        </div>
+                        <div class="sdd-feature-point">
+                            <span>✦</span> Flexible Half-Day, Full-Day & Evening Tour Packages
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="sdd-intro-actions">
+                        <a href="https://wa.me/923325405893?text=Hi,%20I%20would%20like%20to%20book%20a%20Private%20City%20Tour." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="sdd-wa-btn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff" stroke="none"></path>
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                            </svg>
+                            Book Tour via WhatsApp
+                        </a>
+                        <a href="service.html" class="sdd-secondary-btn">Explore All Services →</a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Card Area -->
+                <div class="sdd-intro-card">
+                    <div class="sdd-card-highlight">
+                        <h3>Tailored Sightseeing</h3>
+                        <p>Experience top attractions, photo spots, and hidden gems with your dedicated personal driver.</p>
+                    </div>
+
+                    <div class="sdd-perks-grid">
+                        <div class="sdd-perk-box">
+                            <div class="sdd-perk-icon">📍</div>
+                            <strong>Custom Routes</strong>
+                            <span>Choose your stops</span>
+                        </div>
+                        <div class="sdd-perk-box">
+                            <div class="sdd-perk-icon">🏙️</div>
+                            <strong>Top Landmarks</strong>
+                            <span>Iconic sights & stops</span>
+                        </div>
+                        <div class="sdd-perk-box">
+                            <div class="sdd-perk-icon">🚗</div>
+                            <strong>Private Comfort</strong>
+                            <span>AC vehicles for groups</span>
+                        </div>
+                        <div class="sdd-perk-box">
+                            <div class="sdd-perk-icon">⏱️</div>
+                            <strong>Your Pace</strong>
+                            <span>No rushed tour groups</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MOBILE NAVIGATION SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.getElementById("mobileMenuBtn");
+            const navMenu = document.getElementById("navMenu");
+            const dropdown = document.getElementById("servicesDropdown");
+
+            // Toggle Mobile Menu
+            menuBtn.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+
+            // Toggle Dropdown Menu on Mobile Click
+            dropdown.addEventListener("click", function (e) {
+                if (window.innerWidth <= 992) {
+                    this.classList.toggle("active");
+                }
+            });
+        });
+    </script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Component - Safe Driver Dubai</title>
+    <style>
+        /* BASE RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .sdd-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+        
+        /* --------------------------------------------------
+           FOOTER SECTION
+        -------------------------------------------------- */
+        .sdd-footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+            border-top: 1px solid #1e293b;
+        }
+        
+        .sdd-footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 2.5rem;
+            margin-bottom: 3.5rem;
+        }
+        
+        /* Column 1: Brand Info */
+        .sdd-footer-brand {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            display: inline-block;
+            letter-spacing: -0.5px;
+        }
+        
+        .sdd-footer-brand span {
+            color: #0284c7;
+        }
+        
+        .sdd-footer-about {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Column Headers */
+        .sdd-footer-heading {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+        
+        /* Links Lists */
+        .sdd-footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .sdd-footer-links a {
+            font-size: 0.92rem;
+            color: #94a3b8;
+            transition: all 0.25s ease;
+            display: inline-block;
+        }
+        
+        .sdd-footer-links a:hover {
+            color: #0284c7;
+            transform: translateX(4px);
+        }
+        
+        /* Contact Details */
+        .sdd-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-size: 0.92rem;
+            color: #cbd5e1;
+        }
+        
+        .sdd-contact-icon {
+            font-size: 1.1rem;
+            color: #0284c7;
+            line-height: 1;
+            margin-top: 2px;
+        }
+        
+        /* Footer WhatsApp Button */
+        .sdd-footer-wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 800;
+            padding: 12px 22px;
+            border-radius: 50px;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+            transition: all 0.25s ease;
+        }
+        
+        .sdd-footer-wa-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            color: #ffffff;
+        }
+        
+        /* Bottom Bar */
+        .sdd-footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        
+        .sdd-footer-legal {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        
+        .sdd-footer-legal a {
+            color: #64748b;
+            transition: color 0.2s ease;
+        }
+        
+        .sdd-footer-legal a:hover {
+            color: #94a3b8;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .sdd-footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .sdd-footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .sdd-footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .sdd-footer-legal {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating WhatsApp Button</title>
+    <style>
+        /* FLOATING WHATSAPP BUTTON STYLES */
+        .sdd-float-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+        }
+
+        .sdd-float-wa:hover {
+            transform: scale(1.1);
+            background-color: #1da851;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Pulse Animation Ring */
+        .sdd-float-wa::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #25d366;
+            opacity: 0.7;
+            z-index: -1;
+            animation: wa-pulse 2s infinite;
+        }
+
+        @keyframes wa-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        /* Tooltip Hover Label */
+        .sdd-wa-tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10px);
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .sdd-float-wa:hover .sdd-wa-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* Mobile Screen Adjustments */
+        @media (max-width: 640px) {
+            .sdd-float-wa {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .sdd-wa-tooltip {
+                display: none; /* Hide text tooltip on small touchscreens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/923325405893?text=Hi,%20I%20need%20assistance%20with%20your%20services." 
+       class="sdd-float-wa" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chat on WhatsApp">
+        
+        <!-- Tooltip text on desktop hover -->
+        <span class="sdd-wa-tooltip">Chat with us</span>
+
+        <!-- SVG WhatsApp Icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+        </svg>
+    </a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote Component</title>
+    <style>
+        /* BASE & RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .sdd-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* --------------------------------------------------
+           GET A QUOTE SECTION
+        -------------------------------------------------- */
+        .sdd-quote-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            position: relative;
+        }
+
+        .sdd-quote-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        /* Left Column: Heading & Value Prop */
+        .sdd-quote-tag {
+            display: inline-block;
+            background-color: rgba(2, 132, 199, 0.15);
+            color: #38bdf8;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-quote-title {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-quote-title span {
+            color: #38bdf8;
+        }
+
+        .sdd-quote-desc {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .sdd-quote-perks {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .sdd-perk-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        .sdd-perk-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #0284c7;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Fast WhatsApp Booking Box */
+        .sdd-fast-wa-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .sdd-fast-wa-box h4 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .sdd-fast-wa-box p {
+            font-size: 0.88rem;
+            color: #94a3b8;
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-wa-direct-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 14px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .sdd-wa-direct-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Right Column: Interactive Form */
+        .sdd-quote-card {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem;
+            color: #0f172a;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .sdd-card-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .sdd-card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .sdd-card-header p {
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        .sdd-form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 0.4rem;
+        }
+
+        .sdd-form-input,
+        .sdd-form-select {
+            width: 100%;
+            padding: 12px 16px;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #0f172a;
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .sdd-form-input:focus,
+        .sdd-form-select:focus {
+            border-color: #0284c7;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1);
+        }
+
+        .sdd-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Submit via WhatsApp Button */
+        .sdd-form-submit-btn {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #0284c7;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 14px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+        }
+
+        .sdd-form-submit-btn:hover {
+            background-color: #0369a1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .sdd-quote-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .sdd-quote-title {
+                font-size: 2rem;
+            }
+
+            .sdd-quote-card {
+                padding: 1.5rem;
+            }
+
+            .sdd-form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- GET A QUOTE SECTION -->
+    <section class="sdd-quote-section">
+        <div class="sdd-container">
+            <div class="sdd-quote-grid">
+                
+                <!-- Left Content: Value Proposition & Direct WhatsApp -->
+                <div class="sdd-quote-left">
+                    <span class="sdd-quote-tag">Instant Pricing</span>
+                    <h2 class="sdd-quote-title">Get an Immediate <span>Fare Quote</span></h2>
+                    <p class="sdd-quote-desc">
+                        Looking for a private driver, school commute, or airport transfer in Dubai? Fill out your ride details or send a quick WhatsApp message to get instant availability and custom rates.
+                    </p>
+
+                    <div class="sdd-quote-perks">
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Transparent, fixed prices with zero hidden charges</span>
+                        </div>
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Instant booking confirmation within minutes</span>
+                        </div>
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Professional, licensed drivers across all UAE routes</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Fast WhatsApp Access -->
+                    <div class="sdd-fast-wa-box">
+                        <h4>Need a Ride Immediately?</h4>
+                        <p>Skip filling out forms and talk directly with our dispatch team on WhatsApp right now.</p>
+                        <a href="https://wa.me/923325405893?text=Hi,%20I%20need%20a%20quick%20quote%20for%20a%20safe%20driver%20service." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="sdd-wa-direct-btn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                            </svg>
+                            Book Now via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content: Custom Quote Form -->
+                <div class="sdd-quote-card">
+                    <div class="sdd-card-header">
+                        <h3>Calculate Your Fare</h3>
+                        <p>Complete the form below to receive your tailored estimate.</p>
+                    </div>
+
+                    <form id="quoteForm">
+                        <div class="sdd-form-group">
+                            <label class="sdd-form-label" for="serviceType">Select Service</label>
+                            <select id="serviceType" class="sdd-form-select" required>
+                                <option value="Car with Driver">Car with Driver</option>
+                                <option value="School Pick & Drop">School Pick & Drop</option>
+                                <option value="Airport Transfer">Airport Transfer</option>
+                                <option value="Daily Commute / City Tour">Daily Commute / City Tour</option>
+                            </select>
+                        </div>
+
+                        <div class="sdd-form-row">
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="pickupLocation">Pickup Location</label>
+                                <input type="text" id="pickupLocation" class="sdd-form-input" placeholder="e.g. DIFC, Dubai" required>
+                            </div>
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="dropLocation">Drop-off Location</label>
+                                <input type="text" id="dropLocation" class="sdd-form-input" placeholder="e.g. DXB Airport" required>
+                            </div>
+                        </div>
+
+                        <div class="sdd-form-row">
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="travelDate">Date</label>
+                                <input type="date" id="travelDate" class="sdd-form-input" required>
+                            </div>
+                            <div class="sdd-form-group">
+                                <label class="sdd-form-label" for="travelTime">Time</label>
+                                <input type="time" id="travelTime" class="sdd-form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="sdd-form-group">
+                            <label class="sdd-form-label" for="customerName">Your Name</label>
+                            <input type="text" id="customerName" class="sdd-form-input" placeholder="Enter your full name" required>
+                        </div>
+
+                        <!-- Button Sends Prefilled Form Data Directly to WhatsApp -->
+                        <button type="button" onclick="sendQuoteToWhatsApp()" class="sdd-form-submit-btn">
+                            Get Quote via WhatsApp →
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM TO WHATSAPP CONVERSION SCRIPT -->
+    <script>
+        function sendQuoteToWhatsApp() {
+            // Retrieve form values
+            const service = document.getElementById("serviceType").value;
+            const pickup = document.getElementById("pickupLocation").value;
+            const drop = document.getElementById("dropLocation").value;
+            const date = document.getElementById("travelDate").value;
+            const time = document.getElementById("travelTime").value;
+            const name = document.getElementById("customerName").value;
+
+            // Simple Form Validation
+            if (!pickup || !drop || !date || !time || !name) {
+                alert("Please fill in all fields to request a quote.");
+                return;
+            }
+
+            // Target phone number (Replace with your actual business number)
+            const phoneNumber = "923325405893";
+
+            // Format message string
+            const message = `Hello Safe Driver Dubai! 👋%0A%0AI would like to request a quote for a ride:%0A%0A` +
+                `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                `🚖 *Service:* ${encodeURIComponent(service)}%0A` +
+                `📍 *Pickup:* ${encodeURIComponent(pickup)}%0A` +
+                `🏁 *Drop-off:* ${encodeURIComponent(drop)}%0A` +
+                `📅 *Date:* ${encodeURIComponent(date)}%0A` +
+                `⏰ *Time:* ${encodeURIComponent(time)}%0A%0A` +
+                `Please let me know availability and pricing!`;
+
+            // Open WhatsApp Chat
+            window.open(`https://wa.me/${923325405893}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Private City Tour Services</title>
+    <style>
+        /* BASE & RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .sdd-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* --------------------------------------------------
+           1. CITY TOUR HERO / OVERVIEW SECTION
+        -------------------------------------------------- */
+        .sdd-tour-hero {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+        }
+
+        .sdd-tour-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .sdd-badge {
+            display: inline-block;
+            background-color: rgba(2, 132, 199, 0.15);
+            color: #38bdf8;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-tour-title {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-tour-title span {
+            color: #38bdf8;
+        }
+
+        .sdd-tour-desc {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .sdd-tour-perks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .sdd-perk-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .sdd-perk-icon {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .sdd-wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 14px 28px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .sdd-wa-btn:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Tour Packages Card */
+        .sdd-packages-card {
+            background-color: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+        }
+
+        .sdd-packages-card h3 {
+            font-size: 1.35rem;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+        }
+
+        .sdd-package-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sdd-package-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sdd-package-info h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .sdd-package-info p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        .sdd-package-book {
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 6px 12px;
+            border-radius: 50px;
+            transition: all 0.2s ease;
+        }
+
+        .sdd-package-book:hover {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* --------------------------------------------------
+           2. CITY TOUR FAQS SECTION
+        -------------------------------------------------- */
+        .sdd-faq-section {
+            padding: 5rem 0;
+            background-color: #f8fafc;
+        }
+
+        .sdd-faq-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .sdd-faq-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .sdd-faq-title span {
+            color: #0284c7;
+        }
+
+        .sdd-accordion {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sdd-faq-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .sdd-faq-item.active {
+            border-color: #0284c7;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.08);
+        }
+
+        .sdd-faq-trigger {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            cursor: pointer;
+            gap: 1rem;
+        }
+
+        .sdd-faq-trigger:hover {
+            color: #0284c7;
+        }
+
+        .sdd-faq-icon {
+            width: 28px;
+            height: 28px;
+            background-color: #f1f5f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: #0284c7;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .sdd-faq-item.active .sdd-faq-icon {
+            transform: rotate(180deg);
+            background-color: #0284c7;
+            color: #ffffff;
+        }
+
+        .sdd-faq-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+            background-color: #ffffff;
+        }
+
+        .sdd-faq-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #475569;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            border-top: 1px solid transparent;
+        }
+
+        .sdd-faq-item.active .sdd-faq-content {
+            border-top-color: #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .sdd-tour-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .sdd-tour-title {
+                font-size: 2rem;
+            }
+
+            .sdd-tour-perks {
+                grid-template-columns: 1fr;
+            }
+
+            .sdd-package-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. CITY TOUR HERO / OVERVIEW SECTION -->
+    <section class="sdd-tour-hero">
+        <div class="sdd-container">
+            <div class="sdd-tour-grid">
+                
+                <!-- Left Details -->
+                <div>
+                    <span class="sdd-badge">Explore UAE in Comfort</span>
+                    <h1 class="sdd-tour-title">Private <span>Dubai City Tour</span> & Sightseeing</h1>
+                    <p class="sdd-tour-desc">
+                        Discover Dubai’s iconic landmarks, rich heritage, and modern marvels with a dedicated private vehicle and knowledgeable driver. Customize your itinerary to travel at your own pace with maximum comfort.
+                    </p>
+
+                    <div class="sdd-tour-perks">
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Door-to-door hotel pick & drop</span>
+                        </div>
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>100% custom itinerary options</span>
+                        </div>
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Clean, air-conditioned vehicles</span>
+                        </div>
+                        <div class="sdd-perk-item">
+                            <span class="sdd-perk-icon">✓</span>
+                            <span>Experienced local drivers</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/923325405893?text=Hi,%20I%20would%20like%20to%20book%20a%20Private%20Dubai%20City%20Tour." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="sdd-wa-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff"></path>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                        </svg>
+                        Book City Tour on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Right Tour Packages -->
+                <div class="sdd-packages-card">
+                    <h3>Popular Tour Routes</h3>
+                    <div class="sdd-package-list">
+                        
+                        <div class="sdd-package-item">
+                            <div class="sdd-package-info">
+                                <h4>Half-Day Modern Dubai Tour (4 Hours)</h4>
+                                <p>Burj Khalifa, Dubai Mall, Burj Al Arab & Dubai Marina photo stops.</p>
+                            </div>
+                            <a href="https://wa.me/923325405893    ?text=Hi,%20I%20am%20interested%20in%20the%20Half-Day%20Dubai%20Tour." target="_blank" class="sdd-package-book">Book Now</a>
+                        </div>
+
+                        <div class="sdd-package-item">
+                            <div class="sdd-package-info">
+                                <h4>Full-Day Grand Dubai Tour (8 Hours)</h4>
+                                <p>Old Dubai Gold Souk, Dubai Frame, Atlantis The Palm & Modern sights.</p>
+                            </div>
+                            <a href="https://wa.me/923325405893?text=Hi,%20I%20am%20interested%20in%20the%20Full-Day%20Dubai%20Tour." target="_blank" class="sdd-package-book">Book Now</a>
+                        </div>
+
+                        <div class="sdd-package-item">
+                            <div class="sdd-package-info">
+                                <h4>Abu Dhabi Day Tour from Dubai (10 Hours)</h4>
+                                <p>Sheikh Zayed Grand Mosque, Louvre, Corniche & Yas Island visit.</p>
+                            </div>
+                            <a href="https://wa.me/923325405893?text=Hi,%20I%20am%20interested%20in%20the%20Abu%20Dhabi%20Day%20Tour." target="_blank" class="sdd-package-book">Book Now</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. CITY TOUR FAQS SECTION -->
+    <section class="sdd-faq-section">
+        <div class="sdd-container">
+            
+            <div class="sdd-faq-header">
+                <span class="sdd-badge" style="background-color: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Sightseeing FAQs</span>
+                <h2 class="sdd-faq-title">City Tour <span>Questions</span></h2>
+            </div>
+
+            <div class="sdd-accordion">
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>1. Is the city tour private or shared with other tourists?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            All our city tours are 100% private. You get an exclusive vehicle and dedicated driver solely for your group or family, ensuring complete privacy, flexibility, and personalized comfort.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>2. Can we customize the tour stops and schedule?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Yes! You have full flexibility. You can choose your preferred pickup time and list of attractions you want to visit, or let us recommend the best route to avoid traffic and long queues.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>3. What is included in the city tour package fee?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Our price includes the private vehicle, professional driver, fuel, highway tolls (Salik), and hotel pick-up and drop-off. Attraction entry tickets, meals, and personal shopping expenses are paid separately by guests.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>4. Where does the driver pick us up and drop us off?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            We provide door-to-door service. Your driver can pick you up directly from your hotel lobby, private residence, cruise terminal, or Dubai International Airport (DXB), and drop you off anywhere in the city at the end of the tour.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdd-faq-item">
+                    <button class="sdd-faq-trigger">
+                        <span>5. How do I reserve a private city tour?</span>
+                        <span class="sdd-faq-icon">▼</span>
+                    </button>
+                    <div class="sdd-faq-panel">
+                        <div class="sdd-faq-content">
+                            Booking is simple. Simply send us a message on WhatsApp or call our reservation desk with your tour date, number of passengers, and preferred route. We will confirm your vehicle instantly!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqItems = document.querySelectorAll(".sdd-faq-item");
+
+            faqItems.forEach(item => {
+                const trigger = item.querySelector(".sdd-faq-trigger");
+                const panel = item.querySelector(".sdd-faq-panel");
+
+                trigger.addEventListener("click", () => {
+                    const isActive = item.classList.contains("active");
+
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove("active");
+                        otherItem.querySelector(".sdd-faq-panel").style.maxHeight = null;
+                    });
+
+                    if (!isActive) {
+                        item.classList.add("active");
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<body>
+    
+    <!-- FOOTER SECTION -->
+    <footer class="sdd-footer">
+        <div class="sdd-container">
+            <div class="sdd-footer-grid">
+                
+                <!-- Column 1: Brand Info -->
+                <div class="sdd-footer-col">
+                    <a href="index.html" class="sdd-footer-brand">
+                        SAFE DRIVER <span>DUBAI</span>
+                    </a>
+                    <p class="sdd-footer-about">
+                        Your trusted partner for professional chauffeur, airport transfer, city tour, and daily commute services across Dubai. Premium comfort, safety, and reliability guaranteed.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div class="sdd-footer-col">
+                    <h4 class="sdd-footer-heading">Quick Links</h4>
+                    <ul class="sdd-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.htmlbout.html">About Us</a></li>
+    
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+              
+                
+                <!-- Column 4: Contact & WhatsApp -->
+                <div class="sdd-footer-col">
+                    <h4 class="sdd-footer-heading">Contact Us</h4>
+                    
+                    <div class="sdd-contact-item">
+                        <span class="sdd-contact-icon">📍</span>
+                        <span>DIFC, Dubai, United Arab Emirates</span>
+                    </div>
+                    
+                    <div class="sdd-contact-item">
+                        <span class="sdd-contact-icon">✉️</span>
+                        <a href="mailto:safedriverdubai3@gmail.com" style="color: #cbd5e1;">safedriverdubai3@gmail.com</a>
+                    </div>
+                    
+                    <a href="https://wa.me/923325405893?text=Hi,%20I%20would%20like%20to%20inquire%20about%20your%20safe%20driver%20services." target="_blank" rel="noopener noreferrer" class="sdd-footer-wa-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#ffffff" stroke="none"></path>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#25d366"></path>
+                        </svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+                
+            </div>
+            
+            <!-- Bottom Copyright & Legal Links -->
+            <div class="sdd-footer-bottom">
+                <p>&copy; 2026 Safe Driver Dubai. All Rights Reserved.</p>
+                <ul class="sdd-footer-legal">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
+</html>

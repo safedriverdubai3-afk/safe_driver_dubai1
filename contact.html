@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Safe Driver Dubai</title>
+  <style>
+    /* Reset & Core Styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* ==========================================
+       1. HEADER & DROPDOWN NAVIGATION
+       ========================================== */
+    .site-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 999999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: visible !important;
+    }
+
+    .brand-heading {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .brand-logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .brand-logo span {
+      color: #2563eb;
+    }
+
+    nav {
+      overflow: visible !important;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+      overflow: visible !important;
+    }
+
+    .nav-item {
+      position: relative;
+      padding: 25px 0;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #1e293b;
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #2563eb;
+    }
+
+    .dropdown-arrow {
+      width: 7px;
+      height: 7px;
+      border-right: 2px solid #64748b;
+      border-bottom: 2px solid #64748b;
+      transform: rotate(45deg);
+      margin-top: -3px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-item:hover .dropdown-arrow {
+      transform: rotate(225deg);
+      margin-top: 3px;
+      border-color: #2563eb;
+    }
+
+    /* DROPDOWN MENU */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 240px;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      list-style: none;
+      padding: 8px 0;
+      margin: 0;
+      z-index: 1000000;
+    }
+
+    .nav-item:hover .dropdown-menu,
+    .dropdown-menu:hover {
+      display: block !important;
+    }
+
+    .dropdown-link {
+      display: block;
+      padding: 12px 18px;
+      text-decoration: none;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-link:hover {
+      background-color: #eff6ff;
+      color: #2563eb;
+    }
+
+    .header-cta {
+      background-color: #2563eb;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: background-color 0.2s ease;
+    }
+
+    .header-cta:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Hero Banner */
+    .contact-hero {
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-hero h1 {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .contact-hero h1 span {
+      color: #3b82f6;
+    }
+
+    .contact-hero p {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================
+       2. MAIN PAGE LAYOUT & CONTAINERS
+       ========================================== */
+    .contact-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    /* Company Intro Side */
+    .company-intro h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 15px;
+    }
+
+    .company-intro p {
+      color: #475569;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .info-card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .info-card-icon {
+      width: 45px;
+      height: 45px;
+      background-color: #eff6ff;
+      color: #2563eb;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .info-card-text h4 {
+      font-size: 14px;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .info-card-text p, .info-card-text a {
+      font-size: 16px;
+      color: #0f172a;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .whatsapp-chat-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background-color: #25d366;
+      color: #ffffff;
+      padding: 16px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 16px;
+      width: 100%;
+      margin-top: 10px;
+      transition: background-color 0.2s ease;
+    }
+
+    .whatsapp-chat-btn:hover {
+      background-color: #1ebd5a;
+    }
+
+    /* ==========================================
+       3. MESSAGE / EMAIL FORM SECTION
+       ========================================== */
+    .contact-form-box {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-form-box h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #0f172a;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #2563eb;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* ==========================================
+       4. FOOTER STYLING
+       ========================================== */
+    .site-footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      padding: 60px 20px 20px 20px;
+      margin-top: 80px;
+      width: 100%;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand h3 {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 380px;
+    }
+
+    .footer-links h4 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION WITH FIXED MULTI-PAGE SERVICES DROPDOWN -->
+  <header class="site-header">
+    <div class="nav-container">
+      <h1 class="brand-heading">
+        <a href="/" class="brand-logo">Safe Driver <span>Dubai</span></a>
+      </h1>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/About.html" class="nav-link">About Us</a></li>
+          
+          <!-- SERVICES DROPDOWN (NO 404 NAVIGATION) -->
+          <li class="nav-item">
+            <a href="javascript:void(0);" class="nav-link">
+              Services
+              <span class="dropdown-arrow"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/luxury-chauffeur.html" class="dropdown-link">Luxury Chauffeur</a></li>
+              <li><a href="/airport_transfer_service.html" class="dropdown-link">Airport Transfers</a></li>
+              <li><a href="/city-tour.html" class="dropdown-link">City & Sightseeing Tours</a></li>
+              <li><a href="/monthly_driver.html" class="dropdown-link">Monthly Driver Packages</a></li>
+              <li><a href="/event-transport.html" class="dropdown-link">Event & VIP Transport</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="/blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="/contact.html" class="nav-link active">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://wa.me/923325405893" class="header-cta" target="_blank" rel="noopener">Book Now</a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="contact-hero">
+    <h1>Contact <span>Safe Driver Dubai</span></h1>
+    <p>Get in touch with our team for 24/7 private driver bookings, luxury chauffeur inquiries, and custom package quotes across Dubai.</p>
+  </section>
+
+  <!-- MAIN CONTACT CONTENT GRID -->
+  <main class="contact-container">
+
+    <!-- LEFT SIDE: COMPANY INTRODUCTION & DIRECT CONTACT -->
+    <section class="company-intro">
+      <h2>Your Trusted Chauffeur Partner in Dubai</h2>
+      <p>
+        At <strong>Safe Driver Dubai</strong>, we offer professional, punctual, and fully licensed private drivers across the UAE. Whether you need executive airport transfers, hourly private chauffeurs, event transport, or monthly personal driver packages, our team is available 24/7.
+      </p>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-card-icon">📞</div>
+          <div class="info-card-text">
+            <h4>Direct Call / WhatsApp</h4>
+            <a href="tel:+923325405893">+971 50 000 0000</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">✉️</div>
+          <div class="info-card-text">
+            <h4>Email Support</h4>
+            <a href="mailto:safedriverdubai3@gmail.com">safedriverdubai3@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">📍</div>
+          <div class="info-card-text">
+            <h4>Location</h4>
+            <p>Dubai, United Arab Emirates</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/923325405893?text=Hi,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20safe%20driver%20in%20Dubai." 
+         class="whatsapp-chat-btn" 
+         target="_blank" 
+         rel="noopener">
+        💬 Chat Directly on WhatsApp
+      </a>
+    </section>
+
+    <!-- RIGHT SIDE: MESSAGE / EMAIL FORM SECTION -->
+    <section class="contact-form-box">
+      <h3>Send Us a Message</h3>
+      
+      <form action="https://formsubmit.co/safedriverdubai3@gmail.com" method="POST">
+        
+        <input type="hidden" name="_subject" value="New Safe Driver Dubai Contact Inquiry">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-group">
+          <label for="full-name">Full Name *</label>
+          <input type="text" id="full-name" name="Full Name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email-address">Email Address *</label>
+          <input type="email" id="email-address" name="Email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone-number">Phone / WhatsApp Number *</label>
+          <input type="tel" id="phone-number" name="Phone Number" placeholder="+971 50 000 0000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service-type">Required Service</label>
+          <select id="service-type" name="Selected Service">
+            <option value="Safe Driver Service">Safe Driver (Your Car)</option>
+            <option value="Luxury Chauffeur">Luxury Chauffeur Service</option>
+            <option value="Airport Transfer">Airport Transfer</option>
+            <option value="City Tour">City & Sightseeing Tour</option>
+            <option value="Monthly Package">Monthly Driver Package</option>
+            <option value="Other Inquiries">Other Inquiries</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="user-message">Your Message *</label>
+          <textarea id="user-message" name="Message" rows="5" placeholder="Share your pickup date, time, location, or general questions..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Safe Driver Dubai</h3>
+        <p>Dubai’s premier chauffeur and personal driver service provider. Delivering 24/7 safe, reliable, and luxury transport solutions for residents, executives, and tourists.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/About.html">About Us</a></li>
+          <li><a href="javascript:void(0);">Our Services</a></li>
+          <li><a href="/blog.html">Latest Blog</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/luxury-chauffeur.html">Luxury Chauffeur</a></li>
+          <li><a href="/airport_transfer_service.html">Airport Transfers</a></li>
+          <li><a href="/city-tour.html">City Tours</a></li>
+          <li><a href="/monthly_driver.html">Monthly Packages</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Safe Driver Dubai. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
