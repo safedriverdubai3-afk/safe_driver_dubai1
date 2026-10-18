@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- ہوم پیج (مین پیج) -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- اسکول ٹرانسپورٹ پیج -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/school.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ایئرپورٹ ٹرانسفر سروس -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/airport-transfer_service.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- گھنٹہ وار یا پرسنل ڈرائیور سروس -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/after_party_ride.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- افٹر پارٹی / نائٹ ڈرائیور سروس -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/About.html</loc>
+    <priority>0.70</priority>
+  </url>
+  
+
+  <!-- لگژری شوفر سروس -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/luxury_chauffeur.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- کار ود ڈرائیور -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/car_with_driver.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- منتھلی ڈرائیور -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/monthly_driver.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- کارپوریٹ ڈرائیور سروس -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/corporate_driver_service.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- سٹی ٹور -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/city_tour.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- بلاگ پیج -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/blog.html</loc>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- کانٹیکٹ اس پیج -->
+  <url>
+    <loc>https://safe-driver-dubai1.web.app/contact.html</loc>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>
