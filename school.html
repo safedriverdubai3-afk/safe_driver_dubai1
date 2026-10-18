@@ -1,0 +1,1540 @@
+<!-- HEADER SECTION START -->
+<style>
+  .sd-header-section {
+    background-color: #111827;
+    padding: 12px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  .sd-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .sd-brand-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .sd-brand-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
+  .sd-brand-title {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+  .sd-nav-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .sd-nav-item {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .sd-nav-item:hover, .sd-nav-item.active {
+    color: #3b82f6;
+  }
+
+  /* Dropdown Styles */
+  .sd-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .sd-dropdown-btn {
+    color: #d1d5db;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: inherit;
+  }
+  .sd-dropdown-btn:hover {
+    color: #3b82f6;
+  }
+  .sd-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2937;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1010;
+    border: 1px solid #374151;
+  }
+  .sd-dropdown-content a {
+    color: #e5e7eb;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+  }
+  .sd-dropdown-content a:hover {
+    background-color: #374151;
+    color: #3b82f6;
+  }
+  /* Show dropdown on hover */
+  .sd-dropdown:hover .sd-dropdown-content {
+    display: block;
+  }
+
+  .sd-btn-header {
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    .sd-header-container {
+      justify-content: center;
+      text-align: center;
+    }
+    .sd-nav-links {
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+    .sd-dropdown-content {
+      position: relative;
+      top: 0;
+      box-shadow: none;
+      background-color: #111827;
+      border: none;
+    }
+  }
+</style>
+
+<header class="sd-header-section">
+  <div class="sd-header-container">
+     
+      <h1 class="sd-brand-title">Safe Driver Dubai</h1>
+    </a>
+    
+    <nav class="sd-nav-links">
+      <a href="index.html" class="sd-nav-item">Home</a>
+      <a href="About.html" class="sd-nav-item">About Us</a>
+      
+      <!-- Multi-Option Services Dropdown -->
+      <div class="sd-dropdown">
+        <button class="sd-dropdown-btn">
+          Services ▾
+        </button>
+        <div class="sd-dropdown-content">
+          <a href="after_party_ride.html">After Party Ride</a>
+          <a href="school.html">School Transport</a>
+          <a href="luxury_chauffeur.html">Luxury Chauffeur</a>
+        </div>
+      </div>
+.     <a href="blog.html" class="sd-nav-item">Blogs</a>
+      <a href="contact.html" class="sd-nav-item">Contact Us</a>
+    </nav>
+    
+  </div>
+</header>
+<!-- HEADER SECTION END -->
+
+<!-- SCHOOL TRANSPORT HERO & CONTENT SECTION START -->
+<style>
+  .sd-school-page {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1f2937;
+    background-color: #f9fafb;
+    line-height: 1.6;
+  }
+
+  /* Hero Banner */
+  .sd-school-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 60px 5%;
+    text-align: center;
+  }
+  .sd-school-hero-container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .sd-school-badge {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 16px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+  }
+  .sd-school-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    color: #ffffff;
+  }
+  .sd-school-description {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    margin-bottom: 28px;
+  }
+  .sd-btn-hero-wa {
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  }
+
+  /* Key Highlights Grid */
+  .sd-section-wrapper {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 5%;
+  }
+  .sd-section-heading {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 35px;
+  }
+  .sd-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .sd-highlight-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .sd-highlight-card h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+  }
+  .sd-highlight-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* Why Choose Us & Instant Booking */
+  .sd-two-col-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .sd-info-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+  }
+  .sd-info-box h3 {
+    margin-top: 0;
+    color: #111827;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  .sd-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sd-info-list li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  .sd-booking-card {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .sd-booking-card h3 {
+    color: #ffffff;
+    margin-top: 0;
+  }
+  .sd-booking-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .sd-school-title { font-size: 1.75rem; }
+    .sd-section-wrapper { margin: 30px auto; }
+  }
+</style>
+
+<div class="sd-school-page">
+  <!-- Hero Section -->
+  <section class="sd-school-hero">
+    <div class="sd-school-hero-container">
+      <span class="sd-school-badge">Safe Driver Dubai</span>
+      <h2 class="sd-school-title">School Pickup & Drop-Off Services in Dubai</h2>
+      <p class="sd-school-description">
+        Streamline your daily family routine with Safe Driver Dubai professional school transport service. Our RTA-approved, background-checked personal drivers ensure secure, punctual, and reliable home-to-school transportation for your children while you manage your professional commitments.
+      </p>
+      <a href="https://wa.me/923325405893?text=Book%20School%20Pickup%20Service" class="sd-btn-hero-wa" target="_blank">Book School Driver via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Key Operational Standards Section -->
+  <section class="sd-section-wrapper">
+    <h3 class="sd-section-heading">Key Service Highlights & Operational Standards</h3>
+    <div class="sd-highlights-grid">
+      <div class="sd-highlight-card">
+        <h4>RTA-Approved Drivers</h4>
+        <p>Experienced, vetted chauffeurs trained in child passenger safety and defensive driving across Dubai.</p>
+      </div>
+      <div class="sd-highlight-card">
+        <h4>Absolute Punctuality</h4>
+        <p>Guaranteed on-time morning pickups and afternoon drop-offs aligned strictly with your school's bell schedule.</p>
+      </div>
+      <div class="sd-highlight-card">
+        <h4>Door-to-Door Reliability</h4>
+        <p>Direct pick-up from your residence and secure handoff to authorized school guardians or gate personnel.</p>
+      </div>
+      <div class="sd-highlight-card">
+        <h4>Real-Time Tracking</h4>
+        <p>Direct WhatsApp and phone connectivity with your designated driver for live status updates.</p>
+      </div>
+      <div class="sd-highlight-card">
+        <h4>Rigorous Vehicle Standards</h4>
+        <p>Clean, well-maintained luxury sedans, family SUVs, or executive vans equipped with advanced safety features.</p>
+      </div>
+    </div>
+
+    <!-- Why Choose Us & Instant Booking Grid -->
+    <div class="sd-two-col-grid">
+      <div class="sd-info-box">
+        <h3>Why Busy Parents Choose Us</h3>
+        <ul class="sd-info-list">
+          <li>⏱️ <strong>Time Efficiency:</strong> Reclaim your mornings and eliminate school run traffic stress along Dubai’s busy corridors.</li>
+          <li>📅 <strong>Flexible Scheduling:</strong> Customized weekly or monthly transport packages tailored to match your exact work hours and academic calendars.</li>
+          <li>🛡️ <strong>Safe & Monitored Commutes:</strong> Safe driving practices enforced at all times to guarantee your child's peace of mind and physical safety.</li>
+        </ul>
+      </div>
+
+      <div class="sd-booking-card">
+        <h3>Instant Booking & Inquiries</h3>
+        <p>Ready to reserve your school run chauffeur? Connect directly with our dispatch team to set up your schedule:</p>
+        <a href="https://wa.me/923325405893?text=Inquiry%20for%20School%20Transport" class="sd-btn-hero-wa" target="_blank" style="width: 100%; box-sizing: border-box;">WhatsApp Instant Booking</a>
+        <p style="margin-top: 15px; font-size: 0.85rem; color: #cbd5e1;">💬 24/7 Client Support for last-minute schedule adjustments.</p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- SCHOOL TRANSPORT HERO & CONTENT SECTION END -->
+
+<!-- PRIVATE SCHOOL TRANSPORT SECTION START -->
+<style>
+  .sd-pvt-school-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1f2937;
+    background-color: #f8fafc;
+    line-height: 1.6;
+    padding-bottom: 40px;
+  }
+
+  /* Hero Banner Section */
+  .sd-pvt-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 60px 5%;
+    text-align: center;
+  }
+  .sd-pvt-hero-container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .sd-pvt-badge {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 16px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+  }
+  .sd-pvt-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    color: #ffffff;
+  }
+  .sd-pvt-description {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    margin-bottom: 28px;
+  }
+  .sd-btn-pvt-wa {
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s;
+  }
+  .sd-btn-pvt-wa:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Key Highlights Grid */
+  .sd-content-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 5%;
+  }
+  .sd-section-heading {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 35px;
+  }
+  .sd-pvt-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .sd-pvt-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .sd-pvt-card h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+  }
+  .sd-pvt-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* Why Choose Us & Instant Booking */
+  .sd-pvt-two-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .sd-pvt-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+  }
+  .sd-pvt-box h3 {
+    margin-top: 0;
+    color: #111827;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  .sd-pvt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sd-pvt-list li {
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  .sd-pvt-booking-card {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sd-pvt-booking-card h3 {
+    color: #ffffff;
+    margin-top: 0;
+  }
+  .sd-pvt-booking-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .sd-pvt-title { font-size: 1.75rem; }
+    .sd-content-container { margin: 30px auto; }
+  }
+</style>
+
+<div class="sd-pvt-school-wrapper">
+  <!-- Hero Banner -->
+  <section class="sd-pvt-hero">
+    <div class="sd-pvt-hero-container">
+      <span class="sd-pvt-badge">Safe Driver Dubai</span>
+      <h2 class="sd-pvt-title">Private School Pickup & Drop-Off Services in Dubai</h2>
+      <p class="sd-pvt-description">
+        Eliminate morning stress and busy school zone traffic with Safe Driver Dubai private school pickup and drop-off service. Our RTA-approved, background-checked chauffeurs provide safe, punctual, and reliable home-to-school transport, ensuring your children arrive comfortably every single day.
+      </p>
+      <a href="https://wa.me/923325405893?text=Book%20Private%20School%20Pickup%20Service" class="sd-btn-pvt-wa" target="_blank">Book Private School Driver via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Key Highlights Section -->
+  <section class="sd-content-container">
+    <h3 class="sd-section-heading">Key Service Highlights & Safety Features</h3>
+    <div class="sd-pvt-highlights-grid">
+      <div class="sd-pvt-card">
+        <h4>Safe, Timely Daily Transport</h4>
+        <p>Guaranteed on-time home pickups and prompt school drop-offs synchronized with your child’s academic schedule.</p>
+      </div>
+      <div class="sd-pvt-card">
+        <h4>Polite, Trained Chauffeurs</h4>
+        <p>Professionally vetted drivers trained in defensive driving, child safety protocols, and courteous family interaction.</p>
+      </div>
+      <div class="sd-pvt-card">
+        <h4>Flexible Booking Plans</h4>
+        <p>Tailored service packages available on daily, monthly, or customized recurring schedules to suit your routine.</p>
+      </div>
+      <div class="sd-pvt-card">
+        <h4>Door-to-Door Handoff</h4>
+        <p>Direct collection from your residence and secure drop-off at designated school gates or guardian points.</p>
+      </div>
+      <div class="sd-pvt-card">
+        <h4>Pristine & Safe Fleet</h4>
+        <p>Well-maintained, fully sanitized luxury sedans and family SUVs equipped with modern safety technology.</p>
+      </div>
+    </div>
+
+    <!-- Why Choose Us & Instant Setup Grid -->
+    <div class="sd-pvt-two-col">
+      <div class="sd-pvt-box">
+        <h3>Why Choose Our Private School Transport?</h3>
+        <ul class="sd-pvt-list">
+          <li>✨ <strong>Stress-Free Mornings:</strong> Avoid school zone congestion and time delays while focusing on your work and personal obligations.</li>
+          <li>📱 <strong>Real-Time Communication:</strong> Direct line to your designated driver for live status updates, route confirmations, and schedule coordination.</li>
+          <li>🚘 <strong>Consistent & Reliable Service:</strong> Dedicated drivers assigned to your family for familiar, comfortable, and reliable daily travel.</li>
+        </ul>
+      </div>
+
+      <div class="sd-pvt-booking-card">
+        <h3>Simple Setup & Instant Booking</h3>
+        <p>Setting up your private school commute takes only a few minutes:</p>
+        <a href="https://wa.me/923325405893?text=Inquiry%20for%20Private%20School%20Commute" class="sd-btn-pvt-wa" target="_blank" style="width: 100%; box-sizing: border-box;">WhatsApp Instant Booking</a>
+        <p style="margin-top: 15px; font-size: 0.85rem; color: #cbd5e1;">💬 24/7 Client Support for schedule modifications or temporary route changes.</p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- PRIVATE SCHOOL TRANSPORT SECTION END -->
+
+<!-- WHY CHOOSE US SECTION START -->
+<style>
+  .sd-why-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    line-height: 1.6;
+    padding: 60px 5%;
+  }
+
+  .sd-why-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Header Box */
+  .sd-why-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+  }
+  .sd-why-badge {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .sd-why-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .sd-why-intro {
+    font-size: 1.05rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .sd-section-subhead {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+
+  /* Pillars Grid */
+  .sd-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .sd-pillar-card {
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+  }
+  .sd-pillar-card h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+  }
+  .sd-pillar-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* Commitments Grid */
+  .sd-commit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .sd-commit-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border-left: 4px solid #2563eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background-color: #f8fafc;
+  }
+  .sd-commit-card h4 {
+    margin-top: 0;
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+  .sd-commit-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* Booking Banner */
+  .sd-why-booking {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .sd-why-booking h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+  .sd-why-booking p {
+    color: #94a3b8;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+  .sd-btn-wa-why {
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s;
+  }
+  .sd-btn-wa-why:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 640px) {
+    .sd-why-title { font-size: 1.6rem; }
+    .sd-why-wrapper { padding: 40px 5%; }
+  }
+</style>
+
+<div class="sd-why-wrapper">
+  <div class="sd-why-container">
+    
+    <!-- Title & Intro -->
+    <div class="sd-why-header">
+      <span class="sd-why-badge">Parent Trust & Safety</span>
+      <h2 class="sd-why-title">Why Choose Safe Driver Dubai for Your Child's School Transport?</h2>
+      <p class="sd-why-intro">
+        Selecting a daily transportation partner for your children requires complete trust, verified safety credentials, and absolute reliability. Safe Driver Dubai provides parents across Dubai with a seamless, professional school run solution that eliminates morning commute stress while guaranteeing child passenger safety.
+      </p>
+    </div>
+
+    <!-- Core Pillars of Parent Trust -->
+    <h3 class="sd-section-subhead">Core Pillars of Parent Trust</h3>
+    <div class="sd-pillars-grid">
+      <div class="sd-pillar-card">
+        <h4>Reclaim Morning Time</h4>
+        <p>Eliminate early-hour traffic congestion, school-zone parking delays, and morning rush stress. Focus on your work and priorities while we handle the school run.</p>
+      </div>
+      <div class="sd-pillar-card">
+        <h4>Strict Punctuality</h4>
+        <p>Chauffeurs utilize live traffic monitoring and optimized route selection across all major Dubai corridors for guaranteed on-time drop-offs.</p>
+      </div>
+      <div class="sd-pillar-card">
+        <h4>RTA-Approved Drivers</h4>
+        <p>Every chauffeur undergoes thorough background checks, defensive driving evaluations, and specialized training in child safety protocols.</p>
+      </div>
+      <div class="sd-pillar-card">
+        <h4>Child-Friendly Environment</h4>
+        <p>A welcoming, calm, and respectful atmosphere inside every sanitized, air-conditioned vehicle for a comfortable start to their school day.</p>
+      </div>
+    </div>
+
+    <!-- Service & Operational Commitments -->
+    <h3 class="sd-section-subhead">Service & Operational Commitments</h3>
+    <div class="sd-commit-grid">
+      <div class="sd-commit-card">
+        <h4>Consistent Dedicated Driver</h4>
+        <p>Your child gets the same trusted chauffeur every day to build a familiar, safe, and comfortable commuting routine.</p>
+      </div>
+      <div class="sd-commit-card">
+        <h4>Flexible Route & Time Adjustments</h4>
+        <p>We adapt seamlessly to exam week schedule changes, after-school tuition, coaching activities, and early dismissals.</p>
+      </div>
+      <div class="sd-commit-card">
+        <h4>Real-Time Communication</h4>
+        <p>Direct driver contact via WhatsApp for live status updates, pickup confirmations, and gate handoff peace of mind.</p>
+      </div>
+    </div>
+
+    <!-- Instant Booking & Setup -->
+    <div class="sd-why-booking">
+      <h3>Instant Booking & Family Setup</h3>
+      <p>Coordinate your child's daily travel schedule with our dedicated dispatch team today:</p>
+      <a href="https://wa.me/923325405893?text=Inquiry%20for%20School%20Transport%20Setup" class="sd-btn-wa-why" target="_blank">WhatsApp Instant Booking</a>
+      <p style="margin-top: 15px; font-size: 0.85rem; color: #cbd5e1;">💬 24/7 Client Support available for real-time adjustments, route updates, and urgent requests.</p>
+    </div>
+
+  </div>
+</div>
+<!-- WHY CHOOSE US SECTION END -->
+
+
+<!-- HOW IT WORKS SECTION START -->
+<style>
+  .sd-works-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1f2937;
+    background-color: #f8fafc;
+    line-height: 1.6;
+    padding: 60px 5%;
+  }
+
+  .sd-works-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Section Header */
+  .sd-works-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+  }
+  .sd-works-badge {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .sd-works-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .sd-works-intro {
+    font-size: 1.05rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* 3-Step Process Grid */
+  .sd-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+  }
+  .sd-step-card {
+    background: #ffffff;
+    padding: 30px 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+    text-align: center;
+  }
+  .sd-step-number {
+    background-color: #2563eb;
+    color: #ffffff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  }
+  .sd-step-card h4 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+  }
+  .sd-step-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* Booking Banner */
+  .sd-works-booking {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .sd-works-booking h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+  .sd-works-booking p {
+    color: #94a3b8;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+  .sd-btn-wa-works {
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s;
+  }
+  .sd-btn-wa-works:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 640px) {
+    .sd-works-title { font-size: 1.6rem; }
+    .sd-works-wrapper { padding: 40px 5%; }
+  }
+</style>
+
+<div class="sd-works-wrapper">
+  <div class="sd-works-container">
+    
+    <!-- Title & Intro -->
+    <div class="sd-works-header">
+      <span class="sd-works-badge">Simple & Fast Setup</span>
+      <h2 class="sd-works-title">How Our School Transport Service Works</h2>
+      <p class="sd-works-intro">
+        Booking a reliable, RTA-approved private school driver in Dubai is fast and straightforward. We have designed a seamless 3-step process to get your child’s daily commute arranged in minutes.
+      </p>
+    </div>
+
+    <!-- 3-Step Process -->
+    <div class="sd-steps-grid">
+      <div class="sd-step-card">
+        <div class="sd-step-number">1</div>
+        <h4>Share Your Requirements</h4>
+        <p>Connect with our team via WhatsApp and provide your home location, school address, morning pickup time, and afternoon dismissal schedule.</p>
+      </div>
+
+      <div class="sd-step-card">
+        <div class="sd-step-number">2</div>
+        <h4>Dedicated Driver Assignment</h4>
+        <p>We assign a background-checked, RTA-certified professional driver tailored to your family's daily route and schedule.</p>
+      </div>
+
+      <div class="sd-step-card">
+        <div class="sd-step-number">3</div>
+        <h4>Secure Daily Travel</h4>
+        <p>Enjoy punctual, safe, and stress-free school transportation every single day with real-time updates and complete peace of mind.</p>
+      </div>
+    </div>
+
+    <!-- Instant Booking & Support Banner -->
+    <div class="sd-works-booking">
+      <h3>Instant Booking & Support</h3>
+      <p>Send your route details and secure your family's dedicated driver today:</p>
+      <a href="https://wa.me/923325405893?text=Inquiry%20for%20School%20Transport%20Setup" class="sd-btn-wa-works" target="_blank">WhatsApp Instant Booking</a>
+      <p style="margin-top: 15px; font-size: 0.85rem; color: #cbd5e1;">💬 24/7 Client Support available for schedule modifications, route updates, or custom inquiries.</p>
+    </div>
+
+  </div>
+</div>
+<!-- HOW IT WORKS SECTION END -->
+
+<!-- SCHOOL TRANSPORT PACKAGES SECTION START -->
+<style>
+  .sd-pricing-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1f2937;
+    padding: 60px 5%;
+    line-height: 1.6;
+  }
+
+  .sd-pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sd-pricing-header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .sd-pricing-badge {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .sd-pricing-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+  }
+
+  /* 4-Box Grid Layout */
+  .sd-price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+
+  .sd-price-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .sd-price-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Featured Card Highlight */
+  .sd-price-box.featured {
+    border: 2px solid #2563eb;
+    position: relative;
+  }
+
+  .sd-popular-tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+  }
+
+  .sd-package-name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .sd-package-price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2563eb;
+    margin-bottom: 4px;
+  }
+
+  .sd-price-vat {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .sd-points-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+  }
+
+  .sd-points-list li {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sd-btn-plan {
+    background-color: #25d366;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: block;
+    box-shadow: 0 3px 10px rgba(37, 211, 102, 0.2);
+    transition: background-color 0.2s;
+  }
+
+  .sd-btn-plan:hover {
+    background-color: #20ba5a;
+  }
+
+  @media (max-width: 640px) {
+    .sd-pricing-title { font-size: 1.6rem; }
+    .sd-pricing-wrapper { padding: 40px 5%; }
+  }
+</style>
+
+<div class="sd-pricing-wrapper">
+  <div class="sd-pricing-container">
+    
+    <div class="sd-pricing-header">
+      <span class="sd-pricing-badge">Transparent Monthly Rates</span>
+      <h2 class="sd-pricing-title">School Transport Packages</h2>
+    </div>
+
+    <div class="sd-price-grid">
+      
+      <!-- BOX 1: One Way Trip -->
+      <div class="sd-price-box">
+        <div>
+          <h3 class="sd-package-name">One Way Trip</h3>
+          <div class="sd-package-price">AED 3,500</div>
+          <span class="sd-price-vat">+ 5% VAT / Month</span>
+          
+          <ul class="sd-points-list">
+            <li>✅ <strong>Guaranteed Punctual Pickup:</strong> Exact morning or afternoon single-run door-to-door commute.</li>
+            <li>✅ <strong>Dedicated Family Driver:</strong> Same background-checked, RTA-certified chauffeur every day.</li>
+            <li>✅ <strong>Live WhatsApp Status:</strong> Real-time arrival and gate handoff confirmations for peace of mind.</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/923325405893?text=Book%20One%20Way%20Trip%20School%20Package" class="sd-btn-plan" target="_blank">Book Package</a>
+      </div>
+
+      <!-- BOX 2: One Way Trip with Nanny -->
+      <div class="sd-price-box">
+        <div>
+          <h3 class="sd-package-name">One Way Trip (with Nanny)</h3>
+          <div class="sd-package-price">AED 4,000</div>
+          <span class="sd-price-vat">+ 5% VAT / Month</span>
+          
+          <ul class="sd-points-list">
+            <li>✅ <strong>Extra Passenger Seating:</strong> Dedicated space for your family nanny/attendant during the ride.</li>
+            <li>✅ <strong>In-Vehicle Assistance:</strong> Guaranteed support for child gear, school bags, and safety seating.</li>
+            <li>✅ <strong>Comfort & Safe Transit:</strong> Sanitized, air-conditioned vehicle tailored for young children.</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/923325405893?text=Book%20One%20Way%20Trip%20with%20Nanny%20Package" class="sd-btn-plan" target="_blank">Book Package</a>
+      </div>
+
+      <!-- BOX 3: Round Trip -->
+      <div class="sd-price-box featured">
+        <span class="sd-popular-tag">Most Popular</span>
+        <div>
+          <h3 class="sd-package-name">Round Trip</h3>
+          <div class="sd-package-price">AED 5,000</div>
+          <span class="sd-price-vat">+ 5% VAT / Month</span>
+          
+          <ul class="sd-points-list">
+            <li>✅ <strong>Full Daily Commute Coverage:</strong> Complete morning pickup and afternoon drop-off support.</li>
+            <li>✅ <strong>Traffic-Optimized Routes:</strong> Fast, safe routes bypassing peak Dubai school-zone delays.</li>
+            <li>✅ <strong>Schedule Flexibility:</strong> Easy adjustments for early school dismissals or exam-week timings.</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/923325405893?text=Book%20Round%20Trip%20School%20Package" class="sd-btn-plan" target="_blank">Book Package</a>
+      </div>
+
+      <!-- BOX 4: Round Trip with Nanny -->
+      <div class="sd-price-box">
+        <div>
+          <h3 class="sd-package-name">Round Trip (with Nanny)</h3>
+          <div class="sd-package-price">AED 5,500</div>
+          <span class="sd-price-vat">+ 5% VAT / Month</span>
+          
+          <ul class="sd-points-list">
+            <li>✅ <strong>Complete Family Supervision:</strong> Seamless morning and afternoon rides with nanny accompaniment.</li>
+            <li>✅ <strong>Maximum Safety & Comfort:</strong> Dedicated personal chauffeur with strict child-lock protocols.</li>
+            <li>✅ <strong>Priority Support Line:</strong> 24/7 client concierge for urgent route or schedule updates.</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/923325405893?text=Book%20Round%20Trip%20with%20Nanny%20Package" class="sd-btn-plan" target="_blank">Book Package</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- SCHOOL TRANSPORT PACKAGES SECTION END -->
+
+<!-- GET A QUOTE SECTION START -->
+<style>
+  .sd-quote-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  .sd-quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .sd-quote-badge {
+    background-color: rgba(37, 211, 102, 0.2);
+    color: #25d366;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 16px;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+  }
+
+  .sd-quote-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+
+  .sd-quote-text {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .sd-btn-quote-wa {
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+
+  .sd-btn-quote-wa:hover {
+    transform: translateY(-3px);
+    background-color: #20ba5a;
+  }
+
+  .sd-quote-note {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
+  @media (max-width: 640px) {
+    .sd-quote-title { font-size: 1.6rem; }
+    .sd-quote-container { padding: 30px 20px; }
+  }
+</style>
+
+<div class="sd-quote-wrapper">
+  <div class="sd-quote-container">
+    <span class="sd-quote-badge">Instant Pricing & Rates</span>
+    <h2 class="sd-quote-title">Get a Custom School Transport Quote</h2>
+    <p class="sd-quote-text">
+      Need daily, weekly, or a dedicated monthly school run driver in Dubai? Share your pickup location, school address, and preferred timings to receive an instant transparent quote.
+    </p>
+
+    <!-- Direct WhatsApp Quote Link -->
+    <a href="https://wa.me/923325405893?text=Hello%20Safe%20Driver%20Dubai,%20I%20would%20like%20to%20get%20a%20quote%20for%20school%20transport%20service." class="sd-btn-quote-wa" target="_blank">
+      💬 Get Instant Quote via WhatsApp
+    </a>
+
+    <p class="sd-quote-note">⚡ 24/7 Client Support | Direct assistance for custom family routes & schedule packages.</p>
+  </div>
+</div>
+<!-- GET A QUOTE SECTION END -->
+
+<!-- SCHOOL TRANSPORT FAQS SECTION START -->
+<style>
+  .sd-faq-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+    color: #1f2937;
+    padding: 60px 5%;
+    line-height: 1.6;
+  }
+
+  .sd-faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .sd-faq-header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .sd-faq-badge {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .sd-faq-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+  }
+
+  .sd-faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sd-faq-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+
+  .sd-faq-question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .sd-faq-answer {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .sd-faq-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px;
+    background: #0f172a;
+    color: #ffffff;
+    border-radius: 12px;
+  }
+
+  .sd-btn-faq-wa {
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .sd-faq-title { font-size: 1.6rem; }
+    .sd-faq-wrapper { padding: 40px 5%; }
+  }
+</style>
+
+<div class="sd-faq-wrapper">
+  <div class="sd-faq-container">
+    
+    <div class="sd-faq-header">
+      <span class="sd-faq-badge">Got Questions?</span>
+      <h2 class="sd-faq-title">Frequently Asked Questions (FAQs)</h2>
+    </div>
+
+    <div class="sd-faq-grid">
+      
+      <!-- FAQ 1 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">1. Are your drivers licensed and background-checked for child transport?</h3>
+        <p class="sd-faq-answer">Yes, all our personal drivers and chauffeurs are officially RTA-licensed, police-vetted, and background-checked to guarantee maximum passenger safety for your children.</p>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">2. Will my child get the same dedicated driver every day?</h3>
+        <p class="sd-faq-answer">Yes, we assign a dedicated driver to your family route so your child builds a familiar, comfortable, and safe daily commuting routine.</p>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">3. Do you provide school transport in my personal family car or your vehicles?</h3>
+        <p class="sd-faq-answer">We offer both flexible options: you can hire an RTA-approved safe driver to drive your personal family vehicle or request our luxury family sedans and SUVs.</p>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">4. How do parents track pickup and drop-off status in real time?</h3>
+        <p class="sd-faq-answer">Parents maintain direct WhatsApp and mobile contact with their assigned driver for instant status updates, arrival confirmations, and gate handoff alerts.</p>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">5. Can the schedule be adjusted for after-school coaching or tuition classes?</h3>
+        <p class="sd-faq-answer">Absolutely. Our travel plans cover after-school tuition, sports academies, music classes, and evening extra-curricular activities with flexible timing.</p>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">6. What happens during early school dismissals or exam weeks?</h3>
+        <p class="sd-faq-answer">Simply inform our dispatch team or your assigned driver in advance via WhatsApp, and we will adjust your pickup time according to the school's updated exam calendar.</p>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">7. What are the pricing rates for school pickup and drop-off in Dubai?</h3>
+        <p class="sd-faq-answer">Single trips start from AED 80 (0–10 KM) and AED 105 (10–20 KM). We also offer cost-effective monthly retainer packages tailored to 5-day school weeks.</p>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">8. Which areas in Dubai do you cover for school transport?</h3>
+        <p class="sd-faq-answer">We service all major communities across Dubai, including Downtown Dubai, DIFC, Dubai Marina, Jumeirah, Palm Jumeirah, Arabian Ranches, JGE, and Mirdif.</p>
+      </div>
+
+      <!-- FAQ 9 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">9. How far in advance do I need to book a daily school driver?</h3>
+        <p class="sd-faq-answer">You can schedule a dedicated driver within a few hours. However, we recommend booking 24 to 48 hours in advance to finalize custom timings and route arrangements.</p>
+      </div>
+
+      <!-- FAQ 10 -->
+      <div class="sd-faq-item">
+        <h3 class="sd-faq-question">10. How do I start or book a school driver service?</h3>
+        <p class="sd-faq-answer">Simply click our WhatsApp booking button, share your home address, school location, and timings, and our team will assign your chauffeur immediately.</p>
+      </div>
+
+    </div>
+
+    <!-- FAQ CTA -->
+    <div class="sd-faq-cta">
+      <h3 style="margin-top:0; color:#fff;">Have More Questions?</h3>
+      <p style="color:#94a3b8; margin-bottom:15px;">Chat directly with our support team to customize your family's transport schedule.</p>
+      <a href="https://wa.me/923325405893?text=Hello%20Safe%20Driver%20Dubai,%20I%20have%20a%20question%20about%20school%20transport." class="sd-btn-faq-wa" target="_blank">Chat on WhatsApp</a>
+    </div>
+
+  </div>
+</div>
+<!-- SCHOOL TRANSPORT FAQS SECTION END -->
+
+<!-- FOOTER SECTION START -->
+<style>
+  .sd-footer-section {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 40px 5% 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  .sd-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+  .sd-footer-col h4 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1rem;
+  }
+  .sd-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sd-footer-links li {
+    margin-bottom: 10px;
+  }
+  .sd-footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .sd-footer-links a:hover {
+    color: #3b82f6;
+  }
+  .sd-footer-bottom {
+    border-top: 1px solid #1e293b;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+</style>
+
+<footer class="sd-footer-section">
+  <div class="sd-footer-container">
+    <div class="sd-footer-col">
+      <h4>Safe Driver Dubai</h4>
+      <p style="font-size: 0.85rem; line-height: 1.5;">Premium personal driver and chauffeur services across Dubai and UAE. Reliable, licensed, available 24/7.</p>
+    </div>
+    <div class="sd-footer-col">
+      <h4>Quick Links</h4>
+      <ul class="sd-footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="sd-footer-col">
+      <h4>Our Services</h4>
+      <ul class="sd-footer-links">
+        <li><a href="school.html">School Transport</a></li>
+        <li><a href="after_party_ride.html">After Party Driver</a></li>
+        <li><a href="luxury_chauffeur.html">Luxury Chauffeur</a></li>
+      </ul>
+    </div>
+    <!-- Contact & Location Info Column -->
+    <div class="sd-footer-col">
+      <h4>Contact Info</h4>
+      <ul class="sd-footer-links">
+        <li>📍 <strong>Address:</strong> DIFC, Dubai, United Arab Emirates</li>
+        <li>✉️ <strong>Email:</strong> <a href="mailto:safedriverdubaisupport@gmail.co">safedriverdubaisupport@gmail.com</a></li>
+        <li>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/923325405893?text=Contact%20Safe%20Driver%20Dubai" target="_blank">Chat with Us</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="sd-footer-bottom">
+    <p>&copy; 2026 Safe Driver Dubai. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- FOOTER SECTION END -->
