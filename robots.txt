@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://safe-driver-dubai1.web.app/sitemap.xml
